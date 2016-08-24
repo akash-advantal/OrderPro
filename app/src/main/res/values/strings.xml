@@ -1,0 +1,53 @@
+<resources>
+    <string name="app_name">OrderPro</string>
+    <string name="title_activity_welcome">Home Screen</string>
+    <string name="next">NEXT</string>
+    <string name="skip">SKIP</string>
+    <string name="start">GOT IT</string>
+    <string name="password">Password</string>
+    <string name="username">Username</string>
+    <string name="email">Email Address</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="signup">Don\'t have an account?</string>
+    <string name="signin">Already have an account?</string>
+    <string name="code_confirmation">We\'ve send the confirmation code to your email \n Please check your inbox</string>
+    <string name="slide_1_title">Welcome to OrderPro ! </string>
+    <string name="slide_1_desc">The easiest way to order !</string>
+
+    <string name="slide_2_title">Cloting and Accessories</string>
+    <string name="slide_2_desc">Buy Clothing in a Easy way !</string>
+
+    <string name="slide_3_title">Great Discounts</string>
+    <string name="slide_3_desc">Best discounts on every single service we offer!</string>
+
+    <string name="slide_4_title">SmartPhones</string>
+    <string name="slide_4_desc">An Smart Way to Buy SmartPhones !</string>
+
+    <string name="play_again_desc">To see the welcome slider again, goto Settings -> apps -> welcome slider -> clear data</string>
+    <string name="play_again">Play Again</string>
+    <string name="title_activity_sign_up">SignUp</string>
+
+    <string name="action_settings">Settings</string>
+
+    <string name="icon">Icon</string>
+
+    <string name="addtowish">ADD TO WISHLIST</string>
+
+    <string name="addtocart">ADD TO CART</string>
+
+    <string name="new_arrivals">New Arrivals</string>
+
+    <string name="delivery_address"> Ayush Bhatnagar\n510, 6th Floor,\nShagun Tower,Vijay Nagar Square, A.B Road \nIndore, Madhya Pradesh - 452010 </string>
+
+    <string name="shirtdesription">Look stylish and impressive even in your casuals by wearing this T-shirt for men from Alan Jones. Made from cotton, this T-shirt has full sleeves. You can team this T-shirt with bottoms of your choice to look trendy effortlessly. </string>
+
+
+
+
+
+
+
+
+
+
+</resources>

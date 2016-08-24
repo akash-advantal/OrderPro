@@ -1,0 +1,279 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.orderpro.customer.ui.DashBoardActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#0174DF">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/drawer_icon"
+                android:layout_width="25dp"
+                android:layout_height="30dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerInParent="true"
+                android:background="@drawable/drawer"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/order"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/drawer_icon"
+                android:gravity="center"
+                android:text="Order Pro"
+                android:textColor="#ffffff"
+                android:textSize="20dp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:onClick="slideUpDown"
+                android:padding="10dp">
+
+                <Button
+                    android:id="@+id/arrowdown"
+                    android:layout_width="18dp"
+                    android:layout_height="13dp"
+                    android:background="@drawable/up_arrow"
+                    android:padding="5dp" />
+
+            </LinearLayout>
+        </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+
+    <com.daimajia.slider.library.SliderLayout
+        android:id="@+id/slider"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:layout_below="@+id/toolbar"
+        custom:auto_cycle="true"
+        custom:indicator_visibility="visible"
+        custom:pager_animation="Accordion"
+        custom:pager_animation_span="1100">
+
+    </com.daimajia.slider.library.SliderLayout>
+
+
+    <!--<com.daimajia.slider.library.Indicators.PagerIndicator-->
+        <!--android:id="@+id/custom_indicator"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--android:layout_marginBottom="20dp"-->
+        <!--android:gravity="center"-->
+        <!--custom:selected_color="#0095BF"-->
+        <!--custom:selected_height="6dp"-->
+        <!--custom:selected_padding_left="5dp"-->
+        <!--custom:selected_padding_right="5dp"-->
+        <!--custom:selected_width="6dp"-->
+        <!--custom:shape="oval"-->
+        <!--custom:unselected_color="#55333333"-->
+        <!--custom:unselected_height="6dp"-->
+        <!--custom:unselected_padding_left="5dp"-->
+        <!--custom:unselected_padding_right="5dp"-->
+        <!--custom:unselected_width="6dp" />-->
+
+    <!--<com.daimajia.slider.library.Indicators.PagerIndicator-->
+        <!--android:id="@+id/custom_indicator2"-->
+        <!--style="@style/AndroidImageSlider_Corner_Oval_Orange"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--/>-->
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:layout_below="@+id/slider"
+        android:background="#21268a" />
+
+    <LinearLayout
+        android:id="@+id/btnlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view"
+        android:background="#0174DF"
+        android:orientation="horizontal"
+        android:weightSum="3">
+
+        <com.andexert.library.RippleView
+            android:id="@+id/moree"
+            rv_centered="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="vertical">
+
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/quick_orders_icon" />
+
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:text="Quik Orders"
+                    android:textAllCaps="false"
+                    android:textColor="#ffffff"
+                    android:textSize="15dp" />
+
+            </LinearLayout>
+        </com.andexert.library.RippleView>
+
+        <View
+            android:layout_width="1px"
+            android:layout_height="70dp"
+            android:layout_gravity="center"
+            android:background="#ffffff" />
+
+        <com.andexert.library.RippleView
+            android:id="@+id/moreee"
+            rv_centered="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="vertical">
+
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/notification_icon" />
+
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:text="Notifications"
+                    android:textAllCaps="false"
+                    android:textColor="#ffffff"
+                    android:textSize="15dp" />
+
+            </LinearLayout>
+        </com.andexert.library.RippleView>
+
+        <View
+            android:layout_width="1px"
+            android:layout_height="70dp"
+            android:layout_gravity="center"
+            android:background="#ffffff" />
+
+        <com.andexert.library.RippleView
+            android:id="@+id/more"
+            rv_centered="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="vertical">
+
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/chat_btn_icon" />
+
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:text="Chat"
+                    android:textAllCaps="false"
+                    android:textColor="#ffffff"
+                    android:textSize="15dp" />
+
+            </LinearLayout>
+        </com.andexert.library.RippleView>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/viewLinefirst"
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:layout_below="@+id/btnlayout"
+        android:background="#21268a" />
+
+    <com.ogaclejapan.smarttablayout.SmartTabLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/viewpagertab"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_below="@+id/viewLinefirst"
+        android:background="#0174DF"
+        android:clipToPadding="false"
+        app:stl_defaultTabTextColor="#ffffff"
+        app:stl_defaultTabTextHorizontalPadding="18dp"
+        app:stl_dividerColor="#00000000"
+        app:stl_dividerThickness="0dp"
+        app:stl_indicatorColor="#19246d"
+        app:stl_indicatorCornerRadius="2dp"
+        app:stl_indicatorGravity="center"
+        app:stl_indicatorInterpolation="smart"
+        app:stl_indicatorThickness="36dp"
+        app:stl_underlineColor="#00000000"
+        app:stl_underlineThickness="0dp" />
+
+    <View
+        android:id="@+id/viewline"
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:layout_below="@+id/viewpagertab"
+        android:background="#21268a" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/viewline" />
+
+
+</RelativeLayout>
