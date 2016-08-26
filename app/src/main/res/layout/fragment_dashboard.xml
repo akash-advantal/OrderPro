@@ -135,6 +135,15 @@
 
                 />
             <TextView
+                android:id="@+id/jhcfu"
+                android:layout_width="65dp"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"
+                android:visibility="gone"
+
+                />
+            <TextView
                 android:id="@+id/space1"
                 android:layout_width="65dp"
                 android:layout_height="wrap_content"
