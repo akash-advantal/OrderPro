@@ -1,4 +1,4 @@
-package com.orderpro.customer.ui;
+package com.orderpro.customer;
 
 import com.merchant.orderpro.R;
 import com.orderpro.customer.adapter.DashBoardAdapter;

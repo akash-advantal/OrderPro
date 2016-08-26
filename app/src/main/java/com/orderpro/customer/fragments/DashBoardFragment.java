@@ -17,7 +17,7 @@ import android.widget.Toast;
 
 import com.merchant.orderpro.R;
 import com.orderpro.customer.adapter.DashBoardAdapter;
-import com.orderpro.customer.ui.DummyData;
+import com.orderpro.customer.DummyData;
 import com.orderpro.customer.ui.ProductActivity;
 import com.orderpro.customer.util.RecyclerItemClickListener;
 
