@@ -18,9 +18,8 @@
 
         <LinearLayout
             android:id="@+id/insertlayout"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="30dp"
-            android:layout_gravity="left"
             android:gravity="center"
             android:orientation="horizontal"
             android:weightSum="1">
@@ -126,7 +125,24 @@
                 android:visibility="invisible"
 
                 />
+            <TextView
+                android:id="@+id/space"
+                android:layout_width="65dp"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"
+                android:visibility="gone"
 
+                />
+            <TextView
+                android:id="@+id/space1"
+                android:layout_width="65dp"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"
+                android:visibility="gone"
+
+                />
         </LinearLayout>
     </HorizontalScrollView>
 
