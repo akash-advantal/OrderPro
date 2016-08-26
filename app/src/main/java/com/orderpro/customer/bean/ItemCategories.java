@@ -7,8 +7,7 @@ public class ItemCategories
 {
 
     //akshgdvajy
-    //jcldzc
-    //ksjdf
+     //ksjdf
     //iudsgfu
     //hjf
     String category;
