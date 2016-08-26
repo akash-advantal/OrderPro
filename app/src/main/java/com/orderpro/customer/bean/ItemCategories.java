@@ -3,8 +3,9 @@ package com.orderpro.customer.bean;
 /**
  * Created by AKASH on 08-Aug-16.
  */
-public class ItemCategories {
-
+public class ItemCategories
+{
+//test
     String category;
 
     public String getCategory() {
