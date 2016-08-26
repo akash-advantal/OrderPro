@@ -20,13 +20,47 @@
             android:orientation="horizontal">
 
             <View
+                android:id="@+id/focusimage_home"
+                android:layout_width="5dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="15dp"
+                android:background="@drawable/view_round_corners"
+                android:src="@drawable/focus"
+                />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/home"
+                android:layout_gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="Home"
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="120dp"
+
+            android:orientation="horizontal">
+
+            <View
                 android:id="@+id/focusimage_switch_merchant"
                 android:layout_width="5dp"
                 android:layout_height="30dp"
                 android:layout_marginLeft="15dp"
-                 android:background="@drawable/view_round_corners"
+                android:background="@drawable/view_round_corners"
                 android:src="@drawable/focus"
-        />
+                android:visibility="gone"
+                />
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -45,11 +79,12 @@
 
         </LinearLayout>
 
+
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="30dp"
-            android:layout_marginTop="120dp"
+            android:layout_marginTop="180dp"
 
 
             android:orientation="horizontal">
@@ -85,7 +120,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="30dp"
-            android:layout_marginTop="180dp"
+            android:layout_marginTop="240dp"
             android:orientation="horizontal">
 
 
@@ -120,7 +155,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="30dp"
-            android:layout_marginTop="240dp"
+            android:layout_marginTop="300dp"
 
             android:orientation="horizontal">
 
@@ -156,7 +191,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="30dp"
-            android:layout_marginTop="300dp"
+            android:layout_marginTop="360dp"
 
             android:orientation="horizontal">
 
@@ -192,7 +227,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="30dp"
-            android:layout_marginTop="360dp"
+            android:layout_marginTop="420dp"
 
             android:orientation="horizontal">
 
@@ -228,7 +263,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="30dp"
-            android:layout_marginTop="420dp"
+            android:layout_marginTop="480dp"
 
             android:orientation="horizontal">
 

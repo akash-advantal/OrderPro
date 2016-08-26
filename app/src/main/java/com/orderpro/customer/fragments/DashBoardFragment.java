@@ -32,7 +32,7 @@ public class DashBoardFragment extends Fragment implements View.OnClickListener 
     //TextView tv, tv1;
     DummyData ddobj = new DummyData();
 
-    TextView tv_a, tv_b, tv_c, tv_d, tv_e;
+    TextView tv_a, tv_b, tv_c, tv_d, tv_e, space,space1;
     ImageView iv_a, iv_b, iv_c, iv_d;
     private DashBoardAdapter mAdapter;
 
@@ -50,6 +50,9 @@ public class DashBoardFragment extends Fragment implements View.OnClickListener 
         tv_c = (TextView) v.findViewById(R.id.tv_c);
         tv_d = (TextView) v.findViewById(R.id.tv_d);
         tv_e = (TextView) v.findViewById(R.id.tv_e);
+        space = (TextView) v.findViewById(R.id.space);
+        space1 = (TextView) v.findViewById(R.id.space1);
+
         tv_a.setOnClickListener(this);
         tv_b.setOnClickListener(this);
         tv_c.setOnClickListener(this);
@@ -96,7 +99,7 @@ public class DashBoardFragment extends Fragment implements View.OnClickListener 
 
         //  tv.setBackgroundResource(R.drawable.button_rounded);
 
-        
+
         if (value == "Mobiles") {
             horizontalscroll.setVisibility(View.VISIBLE);
 //akash
@@ -158,18 +161,22 @@ public class DashBoardFragment extends Fragment implements View.OnClickListener 
         } else if (value.equals("S series")) {
             tv_d.setVisibility(View.VISIBLE);
             iv_d.setVisibility(View.VISIBLE);
-
             tv_d.setText(value);
+            horizontalscroll.fullScroll(HorizontalScrollView.FOCUS_RIGHT);
+
             ddobj.initMoblieSubCategoryThreeData();
             mAdapter.notifyDataSetChanged();
         } else if (value.equals("Samsung S1")) {
-
             tv_e.setVisibility(View.VISIBLE);
-            tv_e.setFocusable(true);
             tv_e.setText(value);
             ddobj.initChildData();
             mAdapter.notifyDataSetChanged();
+            space.setVisibility(View.VISIBLE);
+            space1.setVisibility(View.VISIBLE);
             horizontalscroll.fullScroll(HorizontalScrollView.FOCUS_RIGHT);
+
+//          int x =  horizontalscroll.getMaxScrollAmount();
+//            horizontalscroll.scrollTo(x,x);
 
         } else if (value.equals("a")) {
 
@@ -214,10 +221,8 @@ public class DashBoardFragment extends Fragment implements View.OnClickListener 
             case R.id.tv_c:
 //                Toast.makeText(getActivity(), tv_c.getText().toString(), Toast.LENGTH_SHORT).show();
                 insertTextView(tv_c.getText().toString());
-
                 tv_d.setVisibility(View.GONE);
                 tv_e.setVisibility(View.GONE);
-
                 iv_d.setVisibility(View.GONE);
                 break;
             case R.id.tv_d:

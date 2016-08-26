@@ -5,10 +5,6 @@ package com.orderpro.customer.bean;
  */
 public class ItemCategories
 {
-
-//fhgfhvjhvjhghjhgjhgjhghjgjhgjgj    new
-     //iudsgfu
-    //hjf
     String category;
 
     public String getCategory() {
