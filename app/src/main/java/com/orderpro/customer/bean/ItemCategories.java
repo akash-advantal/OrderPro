@@ -5,8 +5,6 @@ package com.orderpro.customer.bean;
  */
 public class ItemCategories
 {
-//test khgf
-    //vhgc
 
     //akshgdvajy
     //jcldzc
