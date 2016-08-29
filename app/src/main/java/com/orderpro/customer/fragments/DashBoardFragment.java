@@ -16,8 +16,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.merchant.orderpro.R;
-import com.orderpro.customer.adapter.DashBoardAdapter;
 import com.orderpro.customer.DummyData;
+import com.orderpro.customer.adapter.DashBoardAdapter;
 import com.orderpro.customer.ui.ProductActivity;
 import com.orderpro.customer.util.RecyclerItemClickListener;
 
@@ -32,7 +32,7 @@ public class DashBoardFragment extends Fragment implements View.OnClickListener 
     //TextView tv, tv1;
     DummyData ddobj = new DummyData();
 
-    TextView tv_a, tv_b, tv_c, tv_d, tv_e, space,space1;
+    TextView tv_a, tv_b, tv_c, tv_d, tv_e;
     ImageView iv_a, iv_b, iv_c, iv_d;
     private DashBoardAdapter mAdapter;
 
@@ -50,8 +50,6 @@ public class DashBoardFragment extends Fragment implements View.OnClickListener 
         tv_c = (TextView) v.findViewById(R.id.tv_c);
         tv_d = (TextView) v.findViewById(R.id.tv_d);
         tv_e = (TextView) v.findViewById(R.id.tv_e);
-        space = (TextView) v.findViewById(R.id.space);
-        space1 = (TextView) v.findViewById(R.id.space1);
 
         tv_a.setOnClickListener(this);
         tv_b.setOnClickListener(this);
@@ -168,12 +166,12 @@ public class DashBoardFragment extends Fragment implements View.OnClickListener 
             mAdapter.notifyDataSetChanged();
         } else if (value.equals("Samsung S1")) {
             tv_e.setVisibility(View.VISIBLE);
-            tv_e.setText(value);
+            tv_e.setText(value+"         ");
             ddobj.initChildData();
             mAdapter.notifyDataSetChanged();
-            space.setVisibility(View.VISIBLE);
-            space1.setVisibility(View.VISIBLE);
-            horizontalscroll.fullScroll(HorizontalScrollView.FOCUS_RIGHT);
+//            horizontalscroll.fullScroll(HorizontalScrollView.FOCUS_RIGHT);
+//            horizontalscroll.fullScroll(horizontalscroll.getNextFocusRightId());
+//            horizontalscroll.scrollTo(0,);horizontalscroll.()
 
 //          int x =  horizontalscroll.getMaxScrollAmount();
 //            horizontalscroll.scrollTo(x,x);
