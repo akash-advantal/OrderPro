@@ -15,19 +15,20 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.orderpro.customer.ui.DashBoardActivity" />
+
         <activity
             android:name="com.orderpro.customer.ui.SignInActivity"
+            android:label="@string/title_activity_welcome"
+            android:windowSoftInputMode="adjustNothing" />
+        <activity
+            android:name="com.orderpro.customer.ui.NavigationActivity"
             android:label="@string/title_activity_welcome"
             android:windowSoftInputMode="adjustNothing" />
         <activity
             android:name="com.orderpro.customer.ui.ProductActivity"
             android:label="@string/title_activity_sign_up"
             android:windowSoftInputMode="adjustNothing" />
-        <activity
-            android:name="com.orderpro.customer.ui.OrderHistoryActivity"
-            android:label="@string/title_activity_sign_up"
-            android:windowSoftInputMode="adjustNothing" />
+
         <activity
             android:name="com.orderpro.customer.ui.SignUpActivity"
             android:label="@string/title_activity_sign_up"

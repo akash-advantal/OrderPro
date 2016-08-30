@@ -18,7 +18,7 @@ TextView signin;
         signin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent in = new Intent(OTPActivity.this,DashBoardActivity.class);
+                Intent in = new Intent(OTPActivity.this, NavigationActivity.class);
                 startActivity(in);
             }
         });

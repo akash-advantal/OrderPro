@@ -7,6 +7,7 @@
     android:orientation="vertical"
     android:padding="10dp">
 
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -32,7 +33,7 @@
             android:gravity="center">
 
             <ImageView
-                android:id="@+id/iv"
+                android:id="@+id/item_image"
 
                 android:layout_width="80dp"
                 android:layout_height="80dp"
@@ -60,6 +61,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
                 android:padding="5dp"
+                android:id="@+id/item_title"
                 android:text="Elegant Blue Shirt"
                 android:textColor="#000"
                 android:textSize="13dp" />
@@ -69,6 +71,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
                 android:padding="5dp"
+                android:id="@+id/item_content"
+
                 android:text="Delivery Status - Pending"
                 android:textColor="#000"
                 android:textSize="13dp" />
@@ -77,6 +81,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
+                android:id="@+id/item_decs"
+
                 android:padding="5dp"
                 android:text="Delivered by 31, july, 2016"
                 android:textColor="#000"

@@ -44,11 +44,12 @@
                 android:layout_alignParentRight="true"
                 android:layout_centerInParent="true"
                 android:gravity="center"
-                android:onClick="slideUpDown"
-                android:padding="10dp">
+                 android:padding="10dp"
+                android:id="@+id/arrowdown"
+
+                >
 
                 <Button
-                    android:id="@+id/arrowdown"
                     android:layout_width="18dp"
                     android:layout_height="13dp"
                     android:background="@drawable/up_arrow"
