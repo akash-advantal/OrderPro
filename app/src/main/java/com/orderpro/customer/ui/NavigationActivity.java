@@ -23,6 +23,7 @@ import java.util.ArrayList;
  * Created by AKASH on 30-Aug-16.
  */
 public class NavigationActivity extends FragmentActivity implements View.OnClickListener {
+
     LinearLayout switch_merchant, myorders, chat, setting, invite_friends, social_media_sharing, offers, home;
     View focusimage_switch_merchant, focusimage_myorders, focusimage_chat, focusimage_setting, focusimage_invite_friends,
             focusimage_social_media_sharing, focusimage_offers, focusimage_home;

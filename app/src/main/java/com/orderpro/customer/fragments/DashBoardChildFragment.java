@@ -12,6 +12,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.HorizontalScrollView;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -25,9 +26,9 @@ import com.orderpro.customer.util.RecyclerItemClickListener;
  * Created by AKASH on 30-Aug-16.
  */
 public class DashBoardChildFragment extends Fragment implements View.OnClickListener {
-     private RecyclerView mRecyclerView;
+    private RecyclerView mRecyclerView;
     //    private TextView list_title;
-//    private LinearLayout insertlayout;
+    private LinearLayout insertlayout;
     private HorizontalScrollView horizontalscroll;
     //
     // private ArrayList<ItemDataDashBoardList> itemData = new ArrayList<>();
@@ -39,12 +40,11 @@ public class DashBoardChildFragment extends Fragment implements View.OnClickList
     private DashBoardAdapter mAdapter;
 
 
-
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_dashboard, container, false);
         mRecyclerView = (RecyclerView) v.findViewById(R.id.Recyclerview);
-//        insertlayout = (LinearLayout) v.findViewById(R.id.insertlayout);
+        insertlayout = (LinearLayout) v.findViewById(R.id.insertlayout);
         horizontalscroll = (HorizontalScrollView) v.findViewById(R.id.horizontalscroll);
         ddobj.initParentData();
 
@@ -128,6 +128,13 @@ public class DashBoardChildFragment extends Fragment implements View.OnClickList
 //                    Toast.makeText(getActivity(), ((TextView) tv).getText().toString(),Toast.LENGTH_SHORT).show();
 //                }
 //            });
+//            tv1 = new TextView(getActivity());
+//            tv1.setLayoutParams(params);
+//            tv1.setTextColor(Color.WHITE);
+//            tv1.setTextSize(15);
+//            tv1.setText("  " + value + " > ");
+//            insertlayout.addView(tv1);
+
         } else if (value == "Wearables") {
             Toast.makeText(getActivity(), value, Toast.LENGTH_SHORT).show();
         } else if (value == "Components") {
@@ -147,12 +154,6 @@ public class DashBoardChildFragment extends Fragment implements View.OnClickList
             mAdapter.notifyDataSetChanged();
 
 
-//            tv1 = new TextView(getActivity());
-//            tv1.setLayoutParams(params);
-//            tv1.setTextColor(Color.WHITE);
-//            tv1.setTextSize(15);
-//            tv1.setText("  " + value + " > ");
-//            insertlayout.addView(tv1);
         } else if (value == "SmartPhone") {
             tv_c.setVisibility(View.VISIBLE);
             iv_c.setVisibility(View.VISIBLE);
@@ -163,15 +164,20 @@ public class DashBoardChildFragment extends Fragment implements View.OnClickList
             tv_d.setVisibility(View.VISIBLE);
             iv_d.setVisibility(View.VISIBLE);
             tv_d.setText(value);
-            horizontalscroll.fullScroll(HorizontalScrollView.FOCUS_RIGHT);
+          horizontalscroll.fullScroll(HorizontalScrollView.FOCUS_RIGHT);
 
             ddobj.initMoblieSubCategoryThreeData();
             mAdapter.notifyDataSetChanged();
         } else if (value.equals("Samsung S1")) {
+
             tv_e.setVisibility(View.VISIBLE);
-            tv_e.setText(value+"         ");
+            tv_e.setText(value);
+            horizontalscroll.fullScroll(HorizontalScrollView.FOCUS_RIGHT);
+
+//            tv_a.setVisibility(View.GONE);
             ddobj.initChildData();
             mAdapter.notifyDataSetChanged();
+
 //            horizontalscroll.fullScroll(HorizontalScrollView.FOCUS_RIGHT);
 //            horizontalscroll.fullScroll(horizontalscroll.getNextFocusRightId());
 //            horizontalscroll.scrollTo(0,);horizontalscroll.()
@@ -240,4 +246,5 @@ public class DashBoardChildFragment extends Fragment implements View.OnClickList
         }
 
 
-    }}
+    }
+}

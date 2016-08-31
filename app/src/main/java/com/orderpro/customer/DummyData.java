@@ -1,8 +1,8 @@
 package com.orderpro.customer;
 
 import com.merchant.orderpro.R;
-import com.orderpro.customer.adapter.DashBoardAdapter;
 import com.orderpro.customer.bean.ItemDataDashBoardList;
+import com.orderpro.customer.bean.OrderHistorydata;
 
 import java.util.ArrayList;
 
@@ -11,8 +11,7 @@ import java.util.ArrayList;
  */
 public class DummyData {
 
-
-    private DashBoardAdapter mAdapter;
+OrderHistorydata orderHistorydata;
     public ArrayList<ItemDataDashBoardList> itemData = new ArrayList<>();
     public  void initParentData() {
         if (itemData.size() > 0) {
@@ -77,6 +76,5 @@ public class DummyData {
         itemData.add(new ItemDataDashBoardList("d", R.drawable.product_img));
 
     }
-
 
 }

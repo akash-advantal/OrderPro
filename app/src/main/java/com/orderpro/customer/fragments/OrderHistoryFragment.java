@@ -44,7 +44,9 @@ public class OrderHistoryFragment extends Fragment implements View.OnClickListen
         orderlist.add(new OrderHistorydata("Elegant Blue Shirt", "Delivery Status - Pending", "Delivered by 31, july, 2016", R.drawable.ic_launcher));
         orderlist.add(new OrderHistorydata("Elegant Blue Shirt", "Delivery Status - Pending", "Delivered by 31, july, 2016", R.drawable.ic_launcher));
         orderlist.add(new OrderHistorydata("Elegant Blue Shirt", "Delivery Status - Pending", "Delivered by 31, july, 2016", R.drawable.ic_launcher));
+
         OrderHistoryAdapter md = new OrderHistoryAdapter(getActivity(), orderlist);
+
         order_listview.setAdapter(md);
         order_listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -74,6 +76,7 @@ public class OrderHistoryFragment extends Fragment implements View.OnClickListen
     }
 
 
-
-
+    public void OrderHistory(ArrayList<OrderHistorydata> orderlist) {
+        this.orderlist = orderlist;
+    }
 }
