@@ -40,7 +40,7 @@ public class NavigationActivity extends FragmentActivity implements View.OnClick
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.fraamelayoutt);
+        setContentView(R.layout.base_frame);
         fmr = getSupportFragmentManager();
         ft = fmr.beginTransaction();
         ft.replace(R.id.frame, new DashBoardParentFragment());
