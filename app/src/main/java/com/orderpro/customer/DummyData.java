@@ -14,14 +14,6 @@ public class DummyData {
 
     private DashBoardAdapter mAdapter;
     public ArrayList<ItemDataDashBoardList> itemData = new ArrayList<>();
-
-
-
-
-
-
-
-
     public  void initParentData() {
         if (itemData.size() > 0) {
             itemData.clear();

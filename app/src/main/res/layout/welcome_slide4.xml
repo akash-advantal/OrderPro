@@ -18,7 +18,7 @@
             android:layout_marginBottom="20dp"
             android:src="@drawable/phone_trans" />
 
-        <TextView
+        <com.orderpro.customer.customfonts.Custom_Txt_Bold
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/slide_4_title"
@@ -26,7 +26,7 @@
             android:textSize="@dimen/slide_title"
             android:textStyle="bold" />
 
-        <TextView
+        <com.orderpro.customer.customfonts.Custom_text
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"

@@ -38,10 +38,10 @@ public class OrderHistoryFragment extends Fragment implements View.OnClickListen
         drawer_icon.setOnClickListener(this);
 
         orderlist = new ArrayList<OrderHistorydata>();
-        orderlist.add(new OrderHistorydata("AAA", "AAA", "AAA", R.drawable.ic_launcher));
-        orderlist.add(new OrderHistorydata("AAA", "AAA", "AAA", R.drawable.ic_launcher));
-        orderlist.add(new OrderHistorydata("AAA", "AAA", "AAA", R.drawable.ic_launcher));
-        orderlist.add(new OrderHistorydata("AAA", "AAA", "AAA", R.drawable.ic_launcher));
+        orderlist.add(new OrderHistorydata("Elegant Blue Shirt", "Delivery Status - Pending", "Delivered by 31, july, 2016", R.drawable.ic_launcher));
+        orderlist.add(new OrderHistorydata("Elegant Blue Shirt", "Delivery Status - Pending", "Delivered by 31, july, 2016", R.drawable.ic_launcher));
+        orderlist.add(new OrderHistorydata("Elegant Blue Shirt", "Delivery Status - Pending", "Delivered by 31, july, 2016", R.drawable.ic_launcher));
+        orderlist.add(new OrderHistorydata("Elegant Blue Shirt", "Delivery Status - Pending", "Delivered by 31, july, 2016", R.drawable.ic_launcher));
         OrderHistoryAdapter md = new OrderHistoryAdapter(getActivity(), orderlist);
         order_listview.setAdapter(md);
 

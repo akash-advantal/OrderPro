@@ -36,7 +36,7 @@
                 android:id="@+id/home"
                 android:layout_gravity="center">
 
-                <TextView
+                <com.orderpro.customer.customfonts.Custom_text
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
@@ -70,7 +70,7 @@
                 android:id="@+id/switch_merchant"
                 android:layout_gravity="center">
 
-                <TextView
+                <com.orderpro.customer.customfonts.Custom_text
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
@@ -106,7 +106,7 @@
 
                 android:layout_gravity="center">
 
-                <TextView
+                <com.orderpro.customer.customfonts.Custom_text
 
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -141,7 +141,7 @@
 
                 android:layout_gravity="center">
 
-                <TextView
+                <com.orderpro.customer.customfonts.Custom_text
 
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -179,7 +179,7 @@
 
                 android:layout_gravity="center">
 
-                <TextView
+                <com.orderpro.customer.customfonts.Custom_text
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
@@ -215,7 +215,7 @@
 
                 android:layout_gravity="center">
 
-                <TextView
+                <com.orderpro.customer.customfonts.Custom_text
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
@@ -252,7 +252,7 @@
 
                 android:layout_gravity="center">
 
-                <TextView
+                <com.orderpro.customer.customfonts.Custom_text
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
@@ -288,7 +288,7 @@
 
                 android:layout_gravity="center">
 
-                <TextView
+                <com.orderpro.customer.customfonts.Custom_text
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
