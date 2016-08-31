@@ -5,51 +5,6 @@
     android:background="#e8e8e8"
     android:orientation="vertical">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
-        android:background="#0174DF"
-        android:weightSum="1">
-
-        <ImageView
-            android:id="@+id/iv_back"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_alignParentLeft="true"
-            android:layout_gravity="center"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="5dp"
-            android:background="@drawable/drawer"
-
-            android:paddingLeft="20dp"
-            android:paddingRight="20dp" />
-
-        <com.orderpro.customer.customfonts.Custom_text
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:layout_gravity="center"
-            android:layout_marginLeft="10dp"
-            android:layout_weight="0.85"
-            android:text="Order Detail"
-            android:textColor="#ffffff"
-            android:textSize="18sp" />
-
-        <ImageView
-            android:layout_width="20dp"
-            android:layout_height="26dp"
-            android:layout_gravity="center"
-            android:layout_marginRight="5dp"
-            android:layout_weight="0.04"
-            android:background="@drawable/search_icon" />
-
-        <ImageView
-            android:layout_width="22dp"
-            android:layout_height="26dp"
-            android:layout_gravity="center"
-            android:layout_weight="0.04"
-            android:background="@drawable/icon_cart_white" />
-    </LinearLayout>
 
 
     <LinearLayout
@@ -78,7 +33,7 @@
             android:gravity="center">
 
             <ImageView
-                android:id="@+id/iv"
+                android:id="@+id/item_image"
 
                 android:layout_width="80dp"
                 android:layout_height="80dp"
@@ -106,6 +61,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
                 android:padding="5dp"
+                android:id="@+id/item_title"
                 android:text="Elegant Blue Shirt"
                 android:textColor="#000"
                 android:textSize="13dp" />
@@ -115,6 +71,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
                 android:padding="5dp"
+                android:id="@+id/item_content"
                 android:text="Delivery Status - Pending"
                 android:textColor="#000"
                 android:textSize="13dp" />
@@ -122,6 +79,7 @@
             <com.orderpro.customer.customfonts.Custom_Txt_Bold
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:id="@+id/item_decs"
                 android:layout_marginTop="10dp"
                 android:padding="5dp"
                 android:text="Delivered by 31, july, 2016"
