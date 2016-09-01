@@ -39,6 +39,7 @@ public class DashBoardChildFragment extends Fragment implements View.OnClickList
     ImageView iv_a, iv_b, iv_c, iv_d;
     private DashBoardAdapter mAdapter;
 
+    TextView tv_f;
 
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -47,6 +48,7 @@ public class DashBoardChildFragment extends Fragment implements View.OnClickList
         insertlayout = (LinearLayout) v.findViewById(R.id.insertlayout);
         horizontalscroll = (HorizontalScrollView) v.findViewById(R.id.horizontalscroll);
         ddobj.initParentData();
+        tv_f = (TextView) v.findViewById(R.id.tv_f);
 
         tv_a = (TextView) v.findViewById(R.id.tv_a);
         tv_b = (TextView) v.findViewById(R.id.tv_b);
@@ -59,6 +61,7 @@ public class DashBoardChildFragment extends Fragment implements View.OnClickList
         tv_c.setOnClickListener(this);
         tv_d.setOnClickListener(this);
         tv_e.setOnClickListener(this);
+        tv_f.setOnClickListener(this);
         iv_a = (ImageView) v.findViewById(R.id.iv_a);
         iv_b = (ImageView) v.findViewById(R.id.iv_b);
         iv_c = (ImageView) v.findViewById(R.id.iv_c);
@@ -164,7 +167,7 @@ public class DashBoardChildFragment extends Fragment implements View.OnClickList
             tv_d.setVisibility(View.VISIBLE);
             iv_d.setVisibility(View.VISIBLE);
             tv_d.setText(value);
-          horizontalscroll.fullScroll(HorizontalScrollView.FOCUS_RIGHT);
+            horizontalscroll.fullScroll(HorizontalScrollView.FOCUS_RIGHT);
 
             ddobj.initMoblieSubCategoryThreeData();
             mAdapter.notifyDataSetChanged();
@@ -173,7 +176,9 @@ public class DashBoardChildFragment extends Fragment implements View.OnClickList
             tv_e.setVisibility(View.VISIBLE);
             tv_e.setText(value);
             horizontalscroll.fullScroll(HorizontalScrollView.FOCUS_RIGHT);
-
+            tv_f.setVisibility(View.VISIBLE);
+            horizontalscroll.arrowScroll(View.FOCUS_RIGHT);
+            horizontalscroll.scrollTo(0, horizontalscroll.getBottom());
 //            tv_a.setVisibility(View.GONE);
             ddobj.initChildData();
             mAdapter.notifyDataSetChanged();

@@ -50,6 +50,7 @@
                 >
 
                 <Button
+                    android:id="@+id/button_arrow"
                     android:layout_width="18dp"
                     android:layout_height="13dp"
                     android:background="@drawable/up_arrow"
@@ -116,7 +117,8 @@
         android:weightSum="3">
 
         <com.andexert.library.RippleView
-            android:id="@+id/moree"
+            android:id="@+id/open_quik_orders"
+
             rv_centered="true"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -124,6 +126,7 @@
             android:gravity="center">
 
             <LinearLayout
+
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -158,7 +161,7 @@
             android:background="#ffffff" />
 
         <com.andexert.library.RippleView
-            android:id="@+id/moreee"
+            android:id="@+id/open_notification"
             rv_centered="true"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -200,7 +203,7 @@
             android:background="#ffffff" />
 
         <com.andexert.library.RippleView
-            android:id="@+id/more"
+            android:id="@+id/open_chat"
             rv_centered="true"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -208,6 +211,7 @@
             android:gravity="center">
 
             <LinearLayout
+
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"

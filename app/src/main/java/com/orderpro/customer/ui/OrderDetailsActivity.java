@@ -18,8 +18,6 @@ ImageView iv_back;
     setContentView(R.layout.activity_order_detail);
         iv_back =  (ImageView)  findViewById(R.id.iv_back);
         iv_back.setOnClickListener(this);
-
-
     }
     @Override
     public void onClick(View v) {

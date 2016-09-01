@@ -15,6 +15,7 @@ import android.widget.ListView;
 import com.merchant.orderpro.R;
 import com.orderpro.customer.adapter.OrderHistoryAdapter;
 import com.orderpro.customer.bean.OrderHistorydata;
+import com.orderpro.customer.ui.CartItem;
 import com.orderpro.customer.ui.NavigationActivity;
 import com.orderpro.customer.ui.OrderDetailsActivity;
 
@@ -27,7 +28,7 @@ public class OrderHistoryFragment extends Fragment implements View.OnClickListen
     ListView order_listview;
     NavigationActivity navigationActivity;
     ArrayList<OrderHistorydata> orderlist;
-    ImageView drawer_icon;
+    ImageView drawer_icon,cart;
     View view;
 
     @Nullable
@@ -36,8 +37,10 @@ public class OrderHistoryFragment extends Fragment implements View.OnClickListen
 
         view = inflater.inflate(R.layout.orderhistory_lv, container, false);
         drawer_icon = (ImageView) view.findViewById(R.id.drawer_icon);
+        cart = (ImageView) view.findViewById(R.id.cart);
         order_listview = (ListView) view.findViewById(R.id.lv_orderhistory);
         drawer_icon.setOnClickListener(this);
+        cart.setOnClickListener(this);
 
         orderlist = new ArrayList<OrderHistorydata>();
         orderlist.add(new OrderHistorydata("Elegant Blue Shirt", "Delivery Status - Pending", "Delivered by 31, july, 2016", R.drawable.ic_launcher));
@@ -72,11 +75,13 @@ public class OrderHistoryFragment extends Fragment implements View.OnClickListen
                 navigationActivity.toggle();
 
                 break;
+            case R.id.cart:
+                startActivity(new Intent(getActivity(), CartItem.class));
         }
     }
 
 
-    public void OrderHistory(ArrayList<OrderHistorydata> orderlist) {
-        this.orderlist = orderlist;
-    }
+//    public void OrderHistory(ArrayList<OrderHistorydata> orderlist) {
+//        this.orderlist = orderlist;
+//    }
 }

@@ -4,9 +4,9 @@
     android:orientation="vertical">
 
     <!--<View-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="0.5px"-->
-        <!--android:background="#ffffff" />-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="0.5px"-->
+    <!--android:background="#ffffff" />-->
 
     <HorizontalScrollView
         android:id="@+id/horizontalscroll"
@@ -14,7 +14,6 @@
         android:layout_height="wrap_content"
         android:background="#19246d"
         android:scrollbars="none"
-
         android:visibility="gone">
 
         <LinearLayout
@@ -43,53 +42,54 @@
                 android:layout_width="20dp"
                 android:layout_height="15dp"
                 android:paddingLeft="5dp"
-                android:visibility="invisible"
+                android:src="@drawable/frwrd_arroww"
 
-                android:src="@drawable/frwrd_arroww" />
+                android:visibility="invisible" />
 
             <TextView
                 android:id="@+id/tv_b"
-                android:visibility="invisible"
-
                 android:layout_width="wrap_content"
+
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:layout_weight=".2"
                 android:text="FGHIJ"
                 android:textColor="@android:color/white"
                 android:textSize="16sp"
+                android:visibility="invisible"
 
 
                 />
+
             <ImageView
                 android:id="@+id/iv_b"
                 android:layout_width="20dp"
                 android:layout_height="15dp"
-                android:visibility="invisible"
-
                 android:paddingLeft="5dp"
-                android:src="@drawable/frwrd_arroww" />
+
+                android:src="@drawable/frwrd_arroww"
+                android:visibility="invisible" />
 
             <TextView
                 android:id="@+id/tv_c"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
-                android:visibility="invisible"
-
                 android:layout_weight=".2"
+
                 android:text="KLMNO"
                 android:textColor="@android:color/white"
                 android:textSize="16sp"
-                />
+                android:visibility="invisible" />
+
             <ImageView
+                android:id="@+id/iv_c"
                 android:layout_width="20dp"
                 android:layout_height="15dp"
-                android:id="@+id/iv_c"
-                android:visibility="invisible"
-
                 android:paddingLeft="5dp"
-                android:src="@drawable/frwrd_arroww" />
+
+                android:src="@drawable/frwrd_arroww"
+                android:visibility="invisible" />
 
             <TextView
                 android:id="@+id/tv_d"
@@ -105,14 +105,14 @@
                 />
 
             <ImageView
+                android:id="@+id/iv_d"
                 android:layout_width="20dp"
                 android:layout_height="15dp"
-                android:id="@+id/iv_d"
 
                 android:paddingLeft="5dp"
-                android:visibility="invisible"
+                android:src="@drawable/frwrd_arroww"
 
-                android:src="@drawable/frwrd_arroww" />
+                android:visibility="invisible" />
 
             <TextView
                 android:id="@+id/tv_e"
@@ -120,17 +120,29 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:layout_weight=".2"
+                android:focusable="true"
                 android:text="UVWYZ"
                 android:textColor="@android:color/white"
                 android:textSize="16sp"
-                android:focusable="true"
                 android:visibility="invisible"
 
                 />
 
-
+            <TextView
+                android:id="@+id/tv_f"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="40dp"
+                android:layout_weight=".2"
+                android:focusable="true"
+                android:text="UVWYZ"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"
+                android:visibility="invisible" />
 
         </LinearLayout>
+
     </HorizontalScrollView>
 
     <android.support.v7.widget.RecyclerView

@@ -15,6 +15,7 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
+import com.andexert.library.RippleView;
 import com.daimajia.slider.library.Animations.DescriptionAnimation;
 import com.daimajia.slider.library.SliderLayout;
 import com.daimajia.slider.library.SliderTypes.BaseSliderView;
@@ -34,13 +35,13 @@ import java.util.HashMap;
 public class DashBoardParentFragment extends Fragment implements BaseSliderView.OnSliderClickListener, ViewPagerEx.OnPageChangeListener, View.OnClickListener {
 
 
-    private Button drawer_icon;
+    private Button drawer_icon,button_arrow;
     private LinearLayout arrowdown;
     private View hiddenPanel;
     private SliderLayout mDemoSlider;
     NavigationActivity navigationActivity;
     private ArrayList<ItemCategories> itemCategories = new ArrayList<>();
-
+    RippleView open_quik_orders,open_notification,open_chat ;
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.activity_main, container, false);
@@ -49,9 +50,16 @@ public class DashBoardParentFragment extends Fragment implements BaseSliderView.
         mDemoSlider = (SliderLayout) view.findViewById(R.id.slider);
         arrowdown = (LinearLayout) view.findViewById(R.id.arrowdown);
         drawer_icon = (Button) view.findViewById(R.id.drawer_icon);
+        button_arrow = (Button) view.findViewById(R.id.button_arrow);
+        open_quik_orders = (RippleView) view.findViewById(R.id.open_quik_orders);
+        open_notification = (RippleView) view.findViewById(R.id.open_notification);
+        open_chat = (RippleView) view.findViewById(R.id.open_chat);
+
         arrowdown.setOnClickListener(this);
         drawer_icon.setOnClickListener(this);
-        drawer_icon.setOnClickListener(this);
+        open_quik_orders.setOnClickListener(this);
+        open_notification.setOnClickListener(this);
+        open_chat.setOnClickListener(this);
 
         final ViewPager viewPager = (ViewPager) view.findViewById(R.id.viewpager);
         final SmartTabLayout viewPagerTab = (SmartTabLayout) view.findViewById(R.id.viewpagertab);
@@ -127,7 +135,7 @@ public class DashBoardParentFragment extends Fragment implements BaseSliderView.
             // Show the panel
             Animation bottomUp = AnimationUtils.loadAnimation(getActivity(),
                     R.anim.bottom_up);
-            arrowdown.setBackground(getResources().getDrawable(R.drawable.up_arrow));
+            button_arrow.setBackground(getResources().getDrawable(R.drawable.up_arrow));
 
             hiddenPanel.startAnimation(bottomUp);
             hiddenPanel.setVisibility(View.VISIBLE);
@@ -136,7 +144,7 @@ public class DashBoardParentFragment extends Fragment implements BaseSliderView.
             Animation bottomDown = AnimationUtils.loadAnimation(getActivity(),
                     R.anim.bottom_down);
 
-            arrowdown.setBackground(getResources().getDrawable(R.drawable.down_arrow));
+            button_arrow.setBackground(getResources().getDrawable(R.drawable.down_arrow));
             hiddenPanel.startAnimation(bottomDown);
             hiddenPanel.setVisibility(View.GONE);
         }
@@ -178,10 +186,20 @@ public class DashBoardParentFragment extends Fragment implements BaseSliderView.
 
                 break;
             case R.id.arrowdown:
-                slideUpDown(arrowdown);
+                slideUpDown(button_arrow);
 
                 break;
+            case R.id.open_quik_orders:
+                Toast.makeText(getActivity(), "open_quik_orders", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.open_notification:
+                Toast.makeText(getActivity(), "open_notification", Toast.LENGTH_SHORT).show();
 
+                break;
+            case R.id.open_chat:
+                Toast.makeText(getActivity(), "open_chat", Toast.LENGTH_SHORT).show();
+
+                break;
 
         }
 
