@@ -15,7 +15,7 @@ import android.widget.ListView;
 import com.merchant.orderpro.R;
 import com.orderpro.customer.adapter.OrderHistoryAdapter;
 import com.orderpro.customer.bean.OrderHistorydata;
-import com.orderpro.customer.ui.CartItem;
+import com.orderpro.customer.ui.CartItemActivity;
 import com.orderpro.customer.ui.NavigationActivity;
 import com.orderpro.customer.ui.OrderDetailsActivity;
 
@@ -76,7 +76,7 @@ public class OrderHistoryFragment extends Fragment implements View.OnClickListen
 
                 break;
             case R.id.cart:
-                startActivity(new Intent(getActivity(), CartItem.class));
+                startActivity(new Intent(getActivity(), CartItemActivity.class));
         }
     }
 

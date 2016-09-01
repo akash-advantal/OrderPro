@@ -43,7 +43,7 @@
             android:windowSoftInputMode="adjustNothing" />
 
         <activity
-            android:name="com.orderpro.customer.ui.CartItem"
+            android:name="com.orderpro.customer.ui.CartItemActivity"
 
             android:windowSoftInputMode="adjustNothing" />
 

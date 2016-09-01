@@ -18,7 +18,7 @@ import java.util.ArrayList;
 /**
  * Created by AKASH on 23-Aug-16.
  */
-public class CartItem extends AppCompatActivity implements View.OnClickListener {
+public class CartItemActivity extends AppCompatActivity implements View.OnClickListener {
     ListView cart_listview;
     ArrayList<OrderHistorydata> cartlist;
     ImageView drawer_icon, cart;
@@ -44,14 +44,14 @@ public class CartItem extends AppCompatActivity implements View.OnClickListener 
         cartlist.add(new OrderHistorydata("Elegant Blue Shirt", "Delivery Status - Pending", "Delivered by 31, july, 2016", R.drawable.ic_launcher));
         cartlist.add(new OrderHistorydata("Elegant Blue Shirt", "Delivery Status - Pending", "Delivered by 31, july, 2016", R.drawable.ic_launcher));
 
-        CartItemAdapter md = new CartItemAdapter(CartItem.this, cartlist);
+        CartItemAdapter md = new CartItemAdapter(CartItemActivity.this, cartlist);
 
         cart_listview.setAdapter(md);
         cart_listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-//                startActivity(new Intent(CartItem.this, OrderDetailsActivity.class));
-                Toast.makeText(CartItem.this, "0", Toast.LENGTH_SHORT).show();
+//                startActivity(new Intent(CartItemActivity.this, OrderDetailsActivity.class));
+                Toast.makeText(CartItemActivity.this, "0", Toast.LENGTH_SHORT).show();
             }
         });
 
