@@ -13,6 +13,7 @@ import android.widget.ImageView;
 import android.widget.ListView;
 
 import com.merchant.orderpro.R;
+import com.orderpro.customer.DummyData;
 import com.orderpro.customer.adapter.OrderHistoryAdapter;
 import com.orderpro.customer.bean.OrderHistorydata;
 import com.orderpro.customer.ui.CartItemActivity;
@@ -28,8 +29,9 @@ public class OrderHistoryFragment extends Fragment implements View.OnClickListen
     ListView order_listview;
     NavigationActivity navigationActivity;
     ArrayList<OrderHistorydata> orderlist;
-    ImageView drawer_icon,cart;
+    ImageView drawer_icon, cart;
     View view;
+    DummyData ddobj = new DummyData();
 
     @Nullable
     @Override
@@ -39,14 +41,11 @@ public class OrderHistoryFragment extends Fragment implements View.OnClickListen
         drawer_icon = (ImageView) view.findViewById(R.id.drawer_icon);
         cart = (ImageView) view.findViewById(R.id.cart);
         order_listview = (ListView) view.findViewById(R.id.lv_orderhistory);
+
         drawer_icon.setOnClickListener(this);
         cart.setOnClickListener(this);
 
-        orderlist = new ArrayList<OrderHistorydata>();
-        orderlist.add(new OrderHistorydata("Elegant Blue Shirt", "Delivery Status - Pending", "Delivered by 31, july, 2016", R.drawable.ic_launcher));
-        orderlist.add(new OrderHistorydata("Elegant Blue Shirt", "Delivery Status - Pending", "Delivered by 31, july, 2016", R.drawable.ic_launcher));
-        orderlist.add(new OrderHistorydata("Elegant Blue Shirt", "Delivery Status - Pending", "Delivered by 31, july, 2016", R.drawable.ic_launcher));
-        orderlist.add(new OrderHistorydata("Elegant Blue Shirt", "Delivery Status - Pending", "Delivered by 31, july, 2016", R.drawable.ic_launcher));
+        orderlist = ddobj.initOrderList();
 
         OrderHistoryAdapter md = new OrderHistoryAdapter(getActivity(), orderlist);
 

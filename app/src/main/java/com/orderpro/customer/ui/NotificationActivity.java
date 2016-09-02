@@ -10,6 +10,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.merchant.orderpro.R;
+import com.orderpro.customer.DummyData;
 import com.orderpro.customer.adapter.NotificationAdapter;
 import com.orderpro.customer.bean.OrderHistorydata;
 
@@ -20,9 +21,11 @@ import java.util.ArrayList;
  */
 public class NotificationActivity extends AppCompatActivity implements View.OnClickListener {
     ListView cart_listview;
-    ArrayList<OrderHistorydata> cartlist;
+    ArrayList<OrderHistorydata> notificationlist;
     ImageView drawer_icon, cart;
     TextView title;
+    DummyData ddobj = new DummyData();
+
 
 
     @Override
@@ -37,13 +40,14 @@ public class NotificationActivity extends AppCompatActivity implements View.OnCl
         drawer_icon.setOnClickListener(this);
         drawer_icon.setBackground(getResources().getDrawable(R.drawable.back_arrows_white));
         title.setText("Your Notifications");
-        cartlist = new ArrayList<OrderHistorydata>();
-        cartlist.add(new OrderHistorydata("Elegant Blue Shirt", "Delivery Status - Pending", "Delivered by 31, july, 2016", R.drawable.notification_icon));
-        cartlist.add(new OrderHistorydata("Elegant Blue Shirt", "Delivery Status - Pending", "Delivered by 31, july, 2016", R.drawable.notification_icon));
-        cartlist.add(new OrderHistorydata("Elegant Blue Shirt", "Delivery Status - Pending", "Delivered by 31, july, 2016", R.drawable.notification_icon));
-        cartlist.add(new OrderHistorydata("Elegant Blue Shirt", "Delivery Status - Pending", "Delivered by 31, july, 2016", R.drawable.notification_icon));
+        notificationlist =    ddobj.initNotificationList();
+//        cartlist = new ArrayList<OrderHistorydata>();
+//        cartlist.add(new OrderHistorydata("Elegant Blue Shirt", "Delivery Status - Pending", "Delivered by 31, july, 2016", R.drawable.notification_icon));
+//        cartlist.add(new OrderHistorydata("Elegant Blue Shirt", "Delivery Status - Pending", "Delivered by 31, july, 2016", R.drawable.notification_icon));
+//        cartlist.add(new OrderHistorydata("Elegant Blue Shirt", "Delivery Status - Pending", "Delivered by 31, july, 2016", R.drawable.notification_icon));
+//        cartlist.add(new OrderHistorydata("Elegant Blue Shirt", "Delivery Status - Pending", "Delivered by 31, july, 2016", R.drawable.notification_icon));
 
-        NotificationAdapter md = new NotificationAdapter(NotificationActivity.this, cartlist);
+        NotificationAdapter md = new NotificationAdapter(NotificationActivity.this, notificationlist);
 
         cart_listview.setAdapter(md);
         cart_listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {

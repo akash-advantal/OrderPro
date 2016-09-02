@@ -27,8 +27,9 @@ import com.ogaclejapan.smarttablayout.SmartTabLayout;
 import com.ogaclejapan.smarttablayout.utils.v4.FragmentPagerItem;
 import com.ogaclejapan.smarttablayout.utils.v4.FragmentPagerItemAdapter;
 import com.ogaclejapan.smarttablayout.utils.v4.FragmentPagerItems;
-import com.orderpro.customer.ui.NavigationActivity;
+import com.orderpro.customer.DummyData;
 import com.orderpro.customer.bean.ItemCategories;
+import com.orderpro.customer.ui.NavigationActivity;
 import com.orderpro.customer.ui.NotificationActivity;
 
 import java.util.ArrayList;
@@ -36,18 +37,24 @@ import java.util.HashMap;
 
 public class DashBoardParentFragment extends Fragment implements BaseSliderView.OnSliderClickListener, ViewPagerEx.OnPageChangeListener, View.OnClickListener {
 
-
-    private Button drawer_icon,button_arrow;
+    private Button drawer_icon, button_arrow;
     private LinearLayout arrowdown;
     private View hiddenPanel;
     private SliderLayout mDemoSlider;
     NavigationActivity navigationActivity;
-    private ArrayList<ItemCategories> itemCategories = new ArrayList<>();
-    RippleView open_quik_orders,open_notification,open_chat ;
+
+    DummyData ddobj = new DummyData();
+
+    ArrayList<ItemCategories> itemCategories;
+    RippleView open_quik_orders, open_notification, open_chat;
+
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+
         View view = inflater.inflate(R.layout.activity_main, container, false);
-        setCategoryItem();
+
+        itemCategories = ddobj.initItemCategories();
+
         hiddenPanel = view.findViewById(R.id.slider);
         mDemoSlider = (SliderLayout) view.findViewById(R.id.slider);
         arrowdown = (LinearLayout) view.findViewById(R.id.arrowdown);
@@ -66,6 +73,7 @@ public class DashBoardParentFragment extends Fragment implements BaseSliderView.
         final ViewPager viewPager = (ViewPager) view.findViewById(R.id.viewpager);
         final SmartTabLayout viewPagerTab = (SmartTabLayout) view.findViewById(R.id.viewpagertab);
         final FragmentPagerItems pages = new FragmentPagerItems(getActivity());
+
         for (ItemCategories titleResId : itemCategories) {
             pages.add(FragmentPagerItem.of(titleResId.getCategory(), DashBoardChildFragment.class));
 
@@ -100,6 +108,7 @@ public class DashBoardParentFragment extends Fragment implements BaseSliderView.
 
             mDemoSlider.addSlider(textSliderView);
         }
+
         mDemoSlider.setPresetTransformer(SliderLayout.Transformer.Accordion);
         mDemoSlider.setPresetIndicator(SliderLayout.PresetIndicators.Center_Bottom);
         mDemoSlider.setCustomAnimation(new DescriptionAnimation());
@@ -156,21 +165,6 @@ public class DashBoardParentFragment extends Fragment implements BaseSliderView.
     private boolean isPanelShown() {
 
         return hiddenPanel.getVisibility() == View.VISIBLE;
-    }
-
-    public void setCategoryItem() {
-
-        if (itemCategories.size() > 0) {
-            itemCategories.clear();
-        }
-        itemCategories.add(new ItemCategories("Electronics"));
-        itemCategories.add(new ItemCategories("Appliances"));
-        itemCategories.add(new ItemCategories("Men"));
-        itemCategories.add(new ItemCategories("Women"));
-        itemCategories.add(new ItemCategories("Baby"));
-        itemCategories.add(new ItemCategories("Kids"));
-        itemCategories.add(new ItemCategories("Home & Furniture"));
-        itemCategories.add(new ItemCategories("Books & More"));
     }
 
 
