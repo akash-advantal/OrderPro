@@ -12,7 +12,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.merchant.orderpro.R;
-import com.orderpro.customer.bean.OrderHistorydata;
+import com.orderpro.customer.bean.CartData;
 
 import java.util.ArrayList;
 
@@ -20,17 +20,17 @@ import java.util.ArrayList;
  * Created by AKASH on 04-Jun-16.
  */
 public class CartItemAdapter extends BaseAdapter {
-    ArrayList<OrderHistorydata> orderlist;
+    ArrayList<CartData> cartlist;
     Context context;
-    public CartItemAdapter(Context context, ArrayList<OrderHistorydata> orderlist) {
+    public CartItemAdapter(Context context, ArrayList<CartData> cartlist) {
 
-        this.orderlist = orderlist;
+        this.cartlist = cartlist;
         this.context = context;
     }
 
     @Override
         public int getCount() {
-         return orderlist.size();
+         return cartlist.size();
     }
 
         @Override
@@ -54,12 +54,12 @@ public class CartItemAdapter extends BaseAdapter {
             TextView item_decs=(TextView) v.findViewById(R.id.item_decs);
 
 
-            OrderHistorydata orderHistorydata= orderlist.get(position);
-            item_title.setText(orderHistorydata.getItem_title());
-            item_content.setText(orderHistorydata.getItem_content());
-            item_decs.setText(orderHistorydata.getItem_decs());
+            CartData cartData= cartlist.get(position);
+            item_title.setText(cartData.getItem_title());
+            item_content.setText(cartData.getItem_content());
+            item_decs.setText(cartData.getItem_decs());
 
-            item_image.setBackgroundResource(orderHistorydata.getItem_image());
+            item_image.setBackgroundResource(cartData.getItem_image());
 
 
             return v;

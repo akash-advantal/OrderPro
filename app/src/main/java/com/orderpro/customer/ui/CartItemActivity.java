@@ -12,7 +12,7 @@ import android.widget.Toast;
 import com.merchant.orderpro.R;
 import com.orderpro.customer.DummyData;
 import com.orderpro.customer.adapter.CartItemAdapter;
-import com.orderpro.customer.bean.OrderHistorydata;
+import com.orderpro.customer.bean.CartData;
 
 import java.util.ArrayList;
 
@@ -21,9 +21,9 @@ import java.util.ArrayList;
  */
 public class CartItemActivity extends AppCompatActivity implements View.OnClickListener {
     ListView cart_listview;
-    ArrayList<OrderHistorydata> cartlist;
+    ArrayList<CartData> cartlist;
     ImageView drawer_icon, cart;
-    View view;
+
     TextView title;
     DummyData ddobj = new DummyData();
 
@@ -41,12 +41,6 @@ public class CartItemActivity extends AppCompatActivity implements View.OnClickL
         drawer_icon.setBackground(getResources().getDrawable(R.drawable.arrow_back));
         title.setText("Your Cart Items");
         cartlist = ddobj.initCartList();
-
-//        cartlist = new ArrayList<OrderHistorydata>();
-//        cartlist.add(new OrderHistorydata("Elegant Blue Shirt", "Delivery Status - Pending", "Delivered by 31, july, 2016", R.drawable.ic_launcher));
-//        cartlist.add(new OrderHistorydata("Elegant Blue Shirt", "Delivery Status - Pending", "Delivered by 31, july, 2016", R.drawable.ic_launcher));
-//        cartlist.add(new OrderHistorydata("Elegant Blue Shirt", "Delivery Status - Pending", "Delivered by 31, july, 2016", R.drawable.ic_launcher));
-//        cartlist.add(new OrderHistorydata("Elegant Blue Shirt", "Delivery Status - Pending", "Delivered by 31, july, 2016", R.drawable.ic_launcher));
 
         CartItemAdapter md = new CartItemAdapter(CartItemActivity.this, cartlist);
 

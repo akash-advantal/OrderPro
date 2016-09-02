@@ -47,6 +47,7 @@ public class DashBoardParentFragment extends Fragment implements BaseSliderView.
 
     ArrayList<ItemCategories> itemCategories;
     RippleView open_quik_orders, open_notification, open_chat;
+    HashMap<String, Integer> file_maps ;
 
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -86,11 +87,8 @@ public class DashBoardParentFragment extends Fragment implements BaseSliderView.
 
         viewPagerTab.setViewPager(viewPager);
 
-        HashMap<String, Integer> file_maps = new HashMap<String, Integer>();
-        file_maps.put("Smartphones offers", R.drawable.mobile_sale);
-        file_maps.put("clothing offers", R.drawable.clothing_offers);
-        file_maps.put("Electronics Discount", R.drawable.electronics_offers);
-        file_maps.put("Kitchen Utensils", R.drawable.kitchen_utensils);
+        file_maps = ddobj.initFileMaps();
+
 
         for (String name : file_maps.keySet()) {
             TextSliderView textSliderView = new TextSliderView(getActivity());

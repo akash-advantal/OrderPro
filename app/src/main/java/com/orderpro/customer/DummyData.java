@@ -1,11 +1,14 @@
 package com.orderpro.customer;
 
 import com.merchant.orderpro.R;
+import com.orderpro.customer.bean.CartData;
 import com.orderpro.customer.bean.ItemCategories;
 import com.orderpro.customer.bean.ItemDataDashBoardList;
+import com.orderpro.customer.bean.NotificationData;
 import com.orderpro.customer.bean.OrderHistorydata;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 /**
  * Created by bhghkhkh on 17-Aug-16.
@@ -14,10 +17,12 @@ public class DummyData {
 
     public ArrayList<ItemDataDashBoardList> itemData = new ArrayList<>();
     public ArrayList<OrderHistorydata> orderlist = new ArrayList<OrderHistorydata>();
-    public ArrayList<OrderHistorydata> notificationlist = new ArrayList<OrderHistorydata>();
-    public ArrayList<OrderHistorydata> cartlist = new ArrayList<OrderHistorydata>();
+    public ArrayList<NotificationData> notificationlist = new ArrayList<NotificationData>();
+    public ArrayList<CartData> cartlist = new ArrayList<CartData>();
     public ArrayList<ItemCategories> itemCategories = new ArrayList<ItemCategories>();
+    HashMap<String, Integer> file_maps = new HashMap<>();
 
+//    HashMap<String, Integer> file_maps ;
 
     public ArrayList<ItemCategories> initItemCategories() {
 
@@ -101,22 +106,34 @@ public class DummyData {
         return orderlist;
     }
 
-    public ArrayList<OrderHistorydata> initCartList() {
+    public ArrayList<CartData> initCartList() {
 
-        cartlist.add(new OrderHistorydata("Elegant Blue Shirt", "Delivery Status - Pending", "Delivered by 31, july, 2016", R.drawable.ic_launcher));
-        cartlist.add(new OrderHistorydata("Elegant Blue Shirt", "Delivery Status - Pending", "Delivered by 31, july, 2016", R.drawable.ic_launcher));
-        cartlist.add(new OrderHistorydata("Elegant Blue Shirt", "Delivery Status - Pending", "Delivered by 31, july, 2016", R.drawable.ic_launcher));
-        cartlist.add(new OrderHistorydata("Elegant Blue Shirt", "Delivery Status - Pending", "Delivered by 31, july, 2016", R.drawable.ic_launcher));
+        cartlist.add(new CartData("Elegant Blue Shirt", "Delivery Status - Pending", "Delivered by 31, july, 2016", R.drawable.ic_launcher));
+        cartlist.add(new CartData("Elegant Blue Shirt", "Delivery Status - Pending", "Delivered by 31, july, 2016", R.drawable.ic_launcher));
+        cartlist.add(new CartData("Elegant Blue Shirt", "Delivery Status - Pending", "Delivered by 31, july, 2016", R.drawable.ic_launcher));
+        cartlist.add(new CartData("Elegant Blue Shirt", "Delivery Status - Pending", "Delivered by 31, july, 2016", R.drawable.ic_launcher));
         return cartlist;
     }
 
-    public ArrayList<OrderHistorydata> initNotificationList() {
+    public ArrayList<NotificationData> initNotificationList() {
 
-        notificationlist.add(new OrderHistorydata("Elegant Blue Shirt", "Delivery Status - Pending", "Delivered by 31, july, 2016", R.drawable.ic_launcher));
-        notificationlist.add(new OrderHistorydata("Elegant Blue Shirt", "Delivery Status - Pending", "Delivered by 31, july, 2016", R.drawable.ic_launcher));
-        notificationlist.add(new OrderHistorydata("Elegant Blue Shirt", "Delivery Status - Pending", "Delivered by 31, july, 2016", R.drawable.ic_launcher));
-        notificationlist.add(new OrderHistorydata("Elegant Blue Shirt", "Delivery Status - Pending", "Delivered by 31, july, 2016", R.drawable.ic_launcher));
+        notificationlist.add(new NotificationData("Elegant Blue Shirt", "Delivery Status - Pending", "Delivered by 31, july, 2016", R.drawable.ic_launcher));
+        notificationlist.add(new NotificationData("Elegant Blue Shirt", "Delivery Status - Pending", "Delivered by 31, july, 2016", R.drawable.ic_launcher));
+        notificationlist.add(new NotificationData("Elegant Blue Shirt", "Delivery Status - Pending", "Delivered by 31, july, 2016", R.drawable.ic_launcher));
+        notificationlist.add(new NotificationData("Elegant Blue Shirt", "Delivery Status - Pending", "Delivered by 31, july, 2016", R.drawable.ic_launcher));
         return notificationlist;
     }
+    public HashMap<String, Integer> initFileMaps() {
+
+        file_maps.put("Smartphones offers", R.drawable.mobile_sale);
+        file_maps.put("clothing offers", R.drawable.clothing_offers);
+        file_maps.put("Electronics Discount", R.drawable.electronics_offers);
+        file_maps.put("Kitchen Utensils", R.drawable.kitchen_utensils);
+        return file_maps;
+    }
+
+
+
+
 
 }
