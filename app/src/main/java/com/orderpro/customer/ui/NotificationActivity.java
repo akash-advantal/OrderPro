@@ -27,7 +27,6 @@ public class NotificationActivity extends AppCompatActivity implements View.OnCl
     DummyData ddobj = new DummyData();
 
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,14 +35,16 @@ public class NotificationActivity extends AppCompatActivity implements View.OnCl
         cart_listview = (ListView) findViewById(R.id.lv_orderhistory);
         cart = (ImageView) findViewById(R.id.cart);
         cart.setVisibility(View.GONE);
+
         title = (TextView) findViewById(R.id.title);
         drawer_icon.setOnClickListener(this);
+
         drawer_icon.setBackground(getResources().getDrawable(R.drawable.back_arrows_white));
         title.setText("Your Notifications");
-        notificationlist =    ddobj.initNotificationList();
+
+        notificationlist = ddobj.initNotificationList();
 
         NotificationAdapter md = new NotificationAdapter(NotificationActivity.this, notificationlist);
-
         cart_listview.setAdapter(md);
         cart_listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -67,4 +68,4 @@ public class NotificationActivity extends AppCompatActivity implements View.OnCl
         }
     }
 
- }
+}

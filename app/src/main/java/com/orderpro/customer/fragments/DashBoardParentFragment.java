@@ -77,10 +77,7 @@ public class DashBoardParentFragment extends Fragment implements BaseSliderView.
 
         for (ItemCategories titleResId : itemCategories) {
             pages.add(FragmentPagerItem.of(titleResId.getCategory(), DashBoardChildFragment.class));
-
         }
-
-
         FragmentPagerItemAdapter adapter = new FragmentPagerItemAdapter(getChildFragmentManager(), pages);
 
         viewPager.setAdapter(adapter);
