@@ -37,6 +37,8 @@ public class NotificationActivity extends AppCompatActivity implements View.OnCl
         cart.setVisibility(View.GONE);
 
         title = (TextView) findViewById(R.id.title);
+
+
         drawer_icon.setOnClickListener(this);
 
         drawer_icon.setBackground(getResources().getDrawable(R.drawable.back_arrows_white));
@@ -51,12 +53,13 @@ public class NotificationActivity extends AppCompatActivity implements View.OnCl
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 //                startActivity(new Intent(CartItemActivity.this, OrderDetailsActivity.class));
                 Toast.makeText(NotificationActivity.this, "0", Toast.LENGTH_SHORT).show();
+
+
             }
         });
 
 
     }
-
 
     @Override
     public void onClick(View v) {
