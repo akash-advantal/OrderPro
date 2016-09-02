@@ -10,11 +10,11 @@
 
     <HorizontalScrollView
         android:id="@+id/horizontalscroll"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#19246d"
         android:scrollbars="none"
-        android:visibility="gone">
+        android:visibility="visible">
 
         <LinearLayout
             android:id="@+id/insertlayout"
@@ -26,13 +26,13 @@
 
             <TextView
                 android:id="@+id/tv_a"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:layout_weight=".2"
                 android:text="ABCDE"
                 android:textColor="@android:color/white"
-                android:textSize="16sp"
+                android:textSize="14sp"
                 android:visibility="invisible"
 
                 />
@@ -48,14 +48,14 @@
 
             <TextView
                 android:id="@+id/tv_b"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
 
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:layout_weight=".2"
                 android:text="FGHIJ"
                 android:textColor="@android:color/white"
-                android:textSize="16sp"
+                android:textSize="14sp"
                 android:visibility="invisible"
 
 
@@ -72,14 +72,14 @@
 
             <TextView
                 android:id="@+id/tv_c"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:layout_weight=".2"
 
                 android:text="KLMNO"
                 android:textColor="@android:color/white"
-                android:textSize="16sp"
+                android:textSize="14sp"
                 android:visibility="invisible" />
 
             <ImageView
@@ -93,13 +93,13 @@
 
             <TextView
                 android:id="@+id/tv_d"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:layout_weight=".2"
                 android:text="PQRST"
                 android:textColor="@android:color/white"
-                android:textSize="16sp"
+                android:textSize="14sp"
                 android:visibility="invisible"
 
                 />
@@ -116,30 +116,31 @@
 
             <TextView
                 android:id="@+id/tv_e"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
+                android:layout_marginRight="35dp"
                 android:layout_weight=".2"
                 android:focusable="true"
                 android:text="UVWYZ"
                 android:textColor="@android:color/white"
-                android:textSize="16sp"
+                android:textSize="14sp"
                 android:visibility="invisible"
 
                 />
 
-            <TextView
-                android:id="@+id/tv_f"
-                android:layout_width="40dp"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="40dp"
-                android:layout_weight=".2"
-                android:focusable="true"
-                android:text="UVWYZ"
-                android:textColor="@android:color/white"
-                android:textSize="16sp"
-                android:visibility="invisible" />
+            <!--<TextView-->
+                <!--android:id="@+id/tv_f"-->
+                <!--android:layout_width="40dp"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginLeft="10dp"-->
+                <!--android:layout_marginRight="40dp"-->
+                <!--android:layout_weight=".2"-->
+                <!--android:focusable="true"-->
+                <!--android:text="UVWYZ"-->
+                <!--android:textColor="@android:color/white"-->
+                <!--android:textSize="16sp"-->
+                <!--android:visibility="invisible" />-->
 
         </LinearLayout>
 

@@ -48,6 +48,13 @@
             android:windowSoftInputMode="adjustNothing" />
 
 
+
+        <activity
+            android:name="com.orderpro.customer.ui.NotificationActivity"
+
+            android:windowSoftInputMode="adjustNothing" />
+
+
     </application>
 
 </manifest>

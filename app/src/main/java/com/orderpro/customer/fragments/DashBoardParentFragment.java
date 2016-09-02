@@ -1,6 +1,7 @@
 package com.orderpro.customer.fragments;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -28,6 +29,7 @@ import com.ogaclejapan.smarttablayout.utils.v4.FragmentPagerItemAdapter;
 import com.ogaclejapan.smarttablayout.utils.v4.FragmentPagerItems;
 import com.orderpro.customer.ui.NavigationActivity;
 import com.orderpro.customer.bean.ItemCategories;
+import com.orderpro.customer.ui.NotificationActivity;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -193,7 +195,8 @@ public class DashBoardParentFragment extends Fragment implements BaseSliderView.
                 Toast.makeText(getActivity(), "open_quik_orders", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.open_notification:
-                Toast.makeText(getActivity(), "open_notification", Toast.LENGTH_SHORT).show();
+//                Toast.makeText(getActivity(), "open_notification", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(getActivity(), NotificationActivity.class));
 
                 break;
             case R.id.open_chat:
