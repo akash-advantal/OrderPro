@@ -13,6 +13,7 @@ import com.daimajia.slider.library.SliderLayout;
 import com.merchant.orderpro.R;
 import com.navdrawer.SimpleSideDrawer;
 import com.orderpro.customer.bean.ItemCategories;
+import com.orderpro.customer.fragments.DashBoardChildFragment;
 import com.orderpro.customer.fragments.DashBoardParentFragment;
 import com.orderpro.customer.fragments.OrderHistoryFragment;
 import com.orderpro.customer.util.OnSwipeTouchListener;
@@ -37,6 +38,7 @@ public class NavigationActivity extends FragmentActivity implements View.OnClick
     private View hiddenPanel;
     private SliderLayout mDemoSlider;
     FragmentTransaction ft;
+    DashBoardChildFragment dashBoardChildFragment = new DashBoardChildFragment();
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -127,7 +129,6 @@ public class NavigationActivity extends FragmentActivity implements View.OnClick
                 ft.commit();
                 nav.toggleLeftDrawer();
                 setVisibility(R.id.home);
-
                 break;
             case R.id.switch_merchant:
                 setVisibility(R.id.switch_merchant);
@@ -174,7 +175,6 @@ public class NavigationActivity extends FragmentActivity implements View.OnClick
             case R.id.switch_merchant:
                 focusimage_switch_merchant.setVisibility(View.VISIBLE);
                 focusimage_home.setVisibility(View.GONE);
-
                 focusimage_myorders.setVisibility(View.GONE);
                 focusimage_chat.setVisibility(View.GONE);
                 focusimage_setting.setVisibility(View.GONE);
@@ -185,7 +185,6 @@ public class NavigationActivity extends FragmentActivity implements View.OnClick
             case R.id.myorders:
                 focusimage_myorders.setVisibility(View.VISIBLE);
                 focusimage_home.setVisibility(View.GONE);
-
                 focusimage_switch_merchant.setVisibility(View.GONE);
                 focusimage_chat.setVisibility(View.GONE);
                 focusimage_setting.setVisibility(View.GONE);
@@ -196,7 +195,6 @@ public class NavigationActivity extends FragmentActivity implements View.OnClick
             case R.id.chat:
                 focusimage_chat.setVisibility(View.VISIBLE);
                 focusimage_home.setVisibility(View.GONE);
-
                 focusimage_myorders.setVisibility(View.GONE);
                 focusimage_switch_merchant.setVisibility(View.GONE);
                 focusimage_setting.setVisibility(View.GONE);
@@ -206,7 +204,6 @@ public class NavigationActivity extends FragmentActivity implements View.OnClick
                 break;
             case R.id.setting:
                 focusimage_home.setVisibility(View.GONE);
-
                 focusimage_setting.setVisibility(View.VISIBLE);
                 focusimage_chat.setVisibility(View.GONE);
                 focusimage_myorders.setVisibility(View.GONE);
@@ -216,12 +213,9 @@ public class NavigationActivity extends FragmentActivity implements View.OnClick
                 focusimage_invite_friends.setVisibility(View.GONE);
                 break;
             case R.id.offers:
-
                 focusimage_offers.setVisibility(View.VISIBLE);
                 focusimage_home.setVisibility(View.GONE);
-
                 focusimage_setting.setVisibility(View.GONE);
-
                 focusimage_chat.setVisibility(View.GONE);
                 focusimage_myorders.setVisibility(View.GONE);
                 focusimage_switch_merchant.setVisibility(View.GONE);
@@ -231,7 +225,6 @@ public class NavigationActivity extends FragmentActivity implements View.OnClick
             case R.id.social_media_sharing:
                 focusimage_social_media_sharing.setVisibility(View.VISIBLE);
                 focusimage_home.setVisibility(View.GONE);
-
                 focusimage_offers.setVisibility(View.GONE);
                 focusimage_setting.setVisibility(View.GONE);
                 focusimage_chat.setVisibility(View.GONE);
@@ -240,10 +233,8 @@ public class NavigationActivity extends FragmentActivity implements View.OnClick
                 focusimage_invite_friends.setVisibility(View.GONE);
                 break;
             case R.id.invite_friends:
-
                 focusimage_invite_friends.setVisibility(View.VISIBLE);
                 focusimage_home.setVisibility(View.GONE);
-
                 focusimage_social_media_sharing.setVisibility(View.GONE);
                 focusimage_offers.setVisibility(View.GONE);
                 focusimage_setting.setVisibility(View.GONE);
@@ -255,20 +246,6 @@ public class NavigationActivity extends FragmentActivity implements View.OnClick
 
     }
 
-    public void setCategoryItem() {
-
-        if (itemCategories.size() > 0) {
-            itemCategories.clear();
-        }
-        itemCategories.add(new ItemCategories("Electronics"));
-        itemCategories.add(new ItemCategories("Appliances"));
-        itemCategories.add(new ItemCategories("Men"));
-        itemCategories.add(new ItemCategories("Women"));
-        itemCategories.add(new ItemCategories("Baby"));
-        itemCategories.add(new ItemCategories("Kids"));
-        itemCategories.add(new ItemCategories("Home & Furniture"));
-        itemCategories.add(new ItemCategories("Books & More"));
-    }
 
     public void toggle() {
         nav.toggleLeftDrawer();

@@ -15,12 +15,16 @@ import java.util.HashMap;
  */
 public class DummyData {
 
-    public ArrayList<ItemDataDashBoardList> itemData = new ArrayList<>();
+    public ArrayList<ItemDataDashBoardList> itemData = new ArrayList<ItemDataDashBoardList>();
+
     public ArrayList<OrderHistorydata> orderlist = new ArrayList<OrderHistorydata>();
     public ArrayList<NotificationData> notificationlist = new ArrayList<NotificationData>();
     public ArrayList<CartData> cartlist = new ArrayList<CartData>();
     public ArrayList<ItemCategories> itemCategories = new ArrayList<ItemCategories>();
     HashMap<String, Integer> file_maps = new HashMap<>();
+
+
+
 
 //    HashMap<String, Integer> file_maps ;
 
@@ -37,8 +41,7 @@ public class DummyData {
 
         return itemCategories;
     }
-
-    public void initParentData() {
+     public void initParentData() {
         itemData.clear();
 
         itemData.add(new ItemDataDashBoardList("Mobiles", R.drawable.product_img));
@@ -97,6 +100,14 @@ public class DummyData {
         itemData.add(new ItemDataDashBoardList("d", R.drawable.product_img));
 
     }
+    public void initAppliancesData() {
+        itemData.clear();
+        itemData.add(new ItemDataDashBoardList("Home Entertainment", R.drawable.phone));
+        itemData.add(new ItemDataDashBoardList("Small Home Aplliances", R.drawable.product_img));
+        itemData.add(new ItemDataDashBoardList("Refrigerators", R.drawable.product_img));
+        itemData.add(new ItemDataDashBoardList("Kitchen", R.drawable.product_img));
+
+    }
 
     public ArrayList<OrderHistorydata> initOrderList() {
         orderlist.add(new OrderHistorydata("Elegant Blue Shirt", "Delivery Status - Pending", "Delivered by 31, july, 2016", R.drawable.ic_launcher));
@@ -131,7 +142,6 @@ public class DummyData {
         file_maps.put("Kitchen Utensils", R.drawable.kitchen_utensils);
         return file_maps;
     }
-
 
 
 

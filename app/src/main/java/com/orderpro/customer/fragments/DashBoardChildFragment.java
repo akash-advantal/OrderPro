@@ -7,6 +7,7 @@ import android.support.v4.app.Fragment;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -27,16 +28,16 @@ import com.orderpro.customer.util.RecyclerItemClickListener;
  */
 public class DashBoardChildFragment extends Fragment implements View.OnClickListener {
 
-    private RecyclerView mRecyclerView;
+    public RecyclerView mRecyclerView;
     //    private TextView list_title;
-    private LinearLayout insertlayout;
-    private HorizontalScrollView horizontalscroll;
+    public LinearLayout insertlayout;
+    public HorizontalScrollView horizontalscroll;
     // private ArrayList<ItemDataDashBoardList> itemData = new ArrayList<>();
     //TextView tv, tv1;
-    DummyData ddobj = new DummyData();
-    TextView tv_a, tv_b, tv_c, tv_d, tv_e;
-    ImageView iv_a, iv_b, iv_c, iv_d;
-    private DashBoardAdapter mAdapter;
+    public DummyData ddobj = new DummyData();
+    public TextView tv_a, tv_b, tv_c, tv_d, tv_e;
+    public ImageView iv_a, iv_b, iv_c, iv_d;
+    public DashBoardAdapter mAdapter;
 //    TextView tv_f;
 
     @Override
@@ -76,6 +77,7 @@ public class DashBoardChildFragment extends Fragment implements View.OnClickList
         mAdapter = new DashBoardAdapter(getActivity(), ddobj.itemData);
         // 4. set adapter
         mRecyclerView.setAdapter(mAdapter);
+
         // 5. set item animator to DefaultAnimator
         mRecyclerView.setItemAnimator(new DefaultItemAnimator());
 //        mRecyclerView.setLayoutManager(mLayoutManager);
@@ -88,10 +90,12 @@ public class DashBoardChildFragment extends Fragment implements View.OnClickList
                         list_title.setText(itemsData[position].getTitle());*/
                         insertTextView(ddobj.itemData.get(position).getTitle());//passing title tofunction
                         //to find   item position@AKASH
-                        //   Log.e("@@@@@", "" + position + itemData.get(position).getTitle());
+                        Log.e("@@@@@", "" + position + ddobj.itemData.get(position).getTitle());
+
                     }
                 })
         );
+
         return v;
     }
 
@@ -131,23 +135,23 @@ public class DashBoardChildFragment extends Fragment implements View.OnClickList
 //            tv1.setText("  " + value + " > ");
 //            insertlayout.addView(tv1);
 
-        } else if (value == "Wearables") {
+        } else if (value.equals("Wearables")) {
 
             Toast.makeText(getActivity(), value, Toast.LENGTH_SHORT).show();
 
-        } else if (value == "Components") {
+        } else if (value.equals("Components")) {
 
             Toast.makeText(getActivity(), value, Toast.LENGTH_SHORT).show();
 
-        } else if (value == "Tablet") {
+        } else if (value.equals("Tablet")) {
 
             Toast.makeText(getActivity(), value, Toast.LENGTH_SHORT).show();
 
-        } else if (value == "Camera") {
+        } else if (value.equals("Camera")) {
 
             Toast.makeText(getActivity(), value, Toast.LENGTH_SHORT).show();
 
-        } else if (value == "Accessories") {
+        } else if (value.equals("Accessories")) {
 
             Toast.makeText(getActivity(), value, Toast.LENGTH_SHORT).show();
 
@@ -155,13 +159,11 @@ public class DashBoardChildFragment extends Fragment implements View.OnClickList
 
             tv_b.setVisibility(View.VISIBLE);
             iv_b.setVisibility(View.VISIBLE);
-
             tv_b.setText(value);
-
             ddobj.initMoblieSubCategoryOneData();
             mAdapter.notifyDataSetChanged();
 
-        } else if (value == "SmartPhone") {
+        } else if (value.equals("SmartPhone")) {
             tv_c.setVisibility(View.VISIBLE);
             iv_c.setVisibility(View.VISIBLE);
             tv_c.setText(value);
@@ -177,32 +179,30 @@ public class DashBoardChildFragment extends Fragment implements View.OnClickList
             mAdapter.notifyDataSetChanged();
         } else if (value.equals("Samsung S1")) {
             tv_e.setText(value);
-
             tv_e.setVisibility(View.VISIBLE);
-
             horizontalscroll.fullScroll(HorizontalScrollView.FOCUS_RIGHT);
-
             ddobj.initChildData();
             mAdapter.notifyDataSetChanged();
-
-//            horizontalscroll.arrowScroll(View.FOCUS_RIGHT);
-//            horizontalscroll.scrollTo(0, horizontalscroll.getBottom());
-
-//            tv_f.setVisibility(View.VISIBLE);
-
-//            tv_a.setVisibility(View.GONE);
-
-//            horizontalscroll.fullScroll(horizontalscroll.getNextFocusRightId());
-//            horizontalscroll.scrollTo(0,);horizontalscroll.()
-
-//          int x =  horizontalscroll.getMaxScrollAmount();
-//            horizontalscroll.scrollTo(x,x);
 
         } else if (value.equals("a")) {
 
             startActivity(new Intent(getActivity(), ProductActivity.class));
-        }
+            } else if (value.equals("Appliances")) {
+            ddobj.initAppliancesData();
+            mAdapter.notifyDataSetChanged();
 
+        } else if (value.equals("Home Entertainment")) {
+            tv_a.setText(value);
+            tv_a.setVisibility(View.VISIBLE);
+            horizontalscroll.setVisibility(View.VISIBLE);
+            ddobj.initChildData();
+            mAdapter.notifyDataSetChanged();
+
+        }else {
+
+            Toast.makeText(getActivity(), value, Toast.LENGTH_SHORT).show();
+
+        }
     }
 
     @Override
@@ -264,5 +264,7 @@ public class DashBoardChildFragment extends Fragment implements View.OnClickList
                 break;
 
         }
+
     }
+
 }

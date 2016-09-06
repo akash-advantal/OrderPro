@@ -6,7 +6,6 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -42,12 +41,15 @@ public class DashBoardParentFragment extends Fragment implements BaseSliderView.
     private View hiddenPanel;
     private SliderLayout mDemoSlider;
     NavigationActivity navigationActivity;
-
+    private ViewPager viewPager;
+    private SmartTabLayout viewPagerTab;
+    TextSliderView textSliderView;
     DummyData ddobj = new DummyData();
+    public DashBoardChildFragment dashBoardChildFragment = new DashBoardChildFragment();
 
     ArrayList<ItemCategories> itemCategories;
     RippleView open_quik_orders, open_notification, open_chat;
-    HashMap<String, Integer> file_maps ;
+    HashMap<String, Integer> file_maps;
 
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -71,24 +73,44 @@ public class DashBoardParentFragment extends Fragment implements BaseSliderView.
         open_notification.setOnClickListener(this);
         open_chat.setOnClickListener(this);
 
-        final ViewPager viewPager = (ViewPager) view.findViewById(R.id.viewpager);
-        final SmartTabLayout viewPagerTab = (SmartTabLayout) view.findViewById(R.id.viewpagertab);
+        viewPager = (ViewPager) view.findViewById(R.id.viewpager);
+        viewPagerTab = (SmartTabLayout) view.findViewById(R.id.viewpagertab);
         final FragmentPagerItems pages = new FragmentPagerItems(getActivity());
 
         for (ItemCategories titleResId : itemCategories) {
-            pages.add(FragmentPagerItem.of(titleResId.getCategory(), DashBoardChildFragment.class));
+            pages.add(FragmentPagerItem.of(titleResId.getCategory(), dashBoardChildFragment.getClass()));
         }
-        FragmentPagerItemAdapter adapter = new FragmentPagerItemAdapter(getChildFragmentManager(), pages);
+        final FragmentPagerItemAdapter adapter = new FragmentPagerItemAdapter(getChildFragmentManager(), pages);
 
         viewPager.setAdapter(adapter);
 
         viewPagerTab.setViewPager(viewPager);
 
+        viewPagerTab.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+            @Override
+            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+
+            }
+
+            @Override
+            public void onPageSelected(int position) {
+                Toast.makeText(getActivity(), itemCategories.get(position).getCategory(), Toast.LENGTH_SHORT).show();
+                if (itemCategories.get(position).getCategory().equals("Appliances")) {
+                    String value = "Appliances";
+                    DashBoardChildFragment   dashBoardChildFragment1 = (DashBoardChildFragment)adapter.getPage(position);
+                    dashBoardChildFragment1.insertTextView(value);
+                }
+            }
+
+            @Override
+            public void onPageScrollStateChanged(int state) {
+
+            }
+        });
         file_maps = ddobj.initFileMaps();
 
-
         for (String name : file_maps.keySet()) {
-            TextSliderView textSliderView = new TextSliderView(getActivity());
+            textSliderView = new TextSliderView(getActivity());
             // initialize a SliderLayout
             textSliderView
                     .description(name)
@@ -117,7 +139,7 @@ public class DashBoardParentFragment extends Fragment implements BaseSliderView.
 
     @Override
     public void onSliderClick(BaseSliderView slider) {
-        Toast.makeText(getActivity(), slider.getBundle().get("extra") + "", Toast.LENGTH_SHORT).show();
+
     }
 
     @Override
@@ -126,11 +148,12 @@ public class DashBoardParentFragment extends Fragment implements BaseSliderView.
 
     @Override
     public void onPageSelected(int position) {
-        Log.d("Slider Demo", "Page Changed: " + position);
+
     }
 
     @Override
     public void onPageScrollStateChanged(int state) {
+
     }
 
 
@@ -173,6 +196,7 @@ public class DashBoardParentFragment extends Fragment implements BaseSliderView.
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.drawer_icon:
+
                 navigationActivity.toggle();
 
                 break;

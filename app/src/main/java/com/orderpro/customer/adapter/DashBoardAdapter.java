@@ -2,6 +2,7 @@ package com.orderpro.customer.adapter;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,7 +15,7 @@ import com.orderpro.customer.bean.ItemDataDashBoardList;
 import java.util.ArrayList;
 
 
-public class DashBoardAdapter extends RecyclerView.Adapter<DashBoardAdapter.ViewHolder>{
+public class DashBoardAdapter extends RecyclerView.Adapter<DashBoardAdapter.ViewHolder> {
     private ArrayList<ItemDataDashBoardList> itemsData;
     Context contexts;
 
@@ -46,6 +47,7 @@ public class DashBoardAdapter extends RecyclerView.Adapter<DashBoardAdapter.View
 
         viewHolder.txtViewTitle.setText(itemsData.get(position).getTitle());
         viewHolder.imgViewIcon.setImageDrawable(contexts.getResources().getDrawable(itemsData.get(position).getImageUrl()));
+        Log.e("@@@", String.valueOf(viewHolder.getAdapterPosition()));
 //        itemsData[position].getTitle();
 //        viewHolder.txtViewTitle.setOnClickListener(new View.OnClickListener() {
 //            @Override
