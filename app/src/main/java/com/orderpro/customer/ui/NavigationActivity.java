@@ -9,11 +9,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
 
-import com.daimajia.slider.library.SliderLayout;
 import com.merchant.orderpro.R;
 import com.navdrawer.SimpleSideDrawer;
 import com.orderpro.customer.bean.ItemCategories;
-import com.orderpro.customer.fragments.DashBoardChildFragment;
 import com.orderpro.customer.fragments.DashBoardParentFragment;
 import com.orderpro.customer.fragments.OrderHistoryFragment;
 import com.orderpro.customer.util.OnSwipeTouchListener;
@@ -29,50 +27,48 @@ public class NavigationActivity extends FragmentActivity implements View.OnClick
     View focusimage_switch_merchant, focusimage_myorders, focusimage_chat, focusimage_setting, focusimage_invite_friends,
             focusimage_social_media_sharing, focusimage_offers, focusimage_home;
 
-    FragmentManager fmr;
-    SimpleSideDrawer nav;
+    FragmentManager fragmentManager;
+    SimpleSideDrawer navigationDrawer;
 
-    private Button arrow, navbtn;
+    private Button navbtn;
     private ArrayList<ItemCategories> itemCategories = new ArrayList<>();
 
-    private View hiddenPanel;
-    private SliderLayout mDemoSlider;
-    FragmentTransaction ft;
-    DashBoardChildFragment dashBoardChildFragment = new DashBoardChildFragment();
+    //    private View hiddenPanel;
+//    private SliderLayout mDemoSlider;
+    FragmentTransaction fragmentTransaction;
+//    DashBoardChildFragment dashBoardChildFragment = new DashBoardChildFragment();
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.base_frame);
-        fmr = getSupportFragmentManager();
-        ft = fmr.beginTransaction();
-        ft.replace(R.id.frame, new DashBoardParentFragment());
-        ft.commit();
-        nav = new SimpleSideDrawer(this);
+        fragmentManager = getSupportFragmentManager();
+        fragmentTransaction = fragmentManager.beginTransaction();
+        fragmentTransaction.replace(R.id.frame, new DashBoardParentFragment());
+        fragmentTransaction.commit();
+        navigationDrawer = new SimpleSideDrawer(this);
         initview();
 
     }
 
     public void initview() {
-        nav.setLeftBehindContentView(R.layout.navigation);
-        nav.setAnimationDurationLeft(500);
-        // navbtn = (LinearLayout) findViewById(R.id.order);
+        navigationDrawer.setLeftBehindContentView(R.layout.navigation);
+        navigationDrawer.setAnimationDurationLeft(500);
         navbtn = (Button) findViewById(R.id.drawer_icon);
-//        navbtn.setOnClickListener(this);
-        nav.setOnTouchListener(new OnSwipeTouchListener(this) {
+        navigationDrawer.setOnTouchListener(new OnSwipeTouchListener(this) {
             public void onSwipeTop() {
                 //    Toast.makeText(SideMenu.this, "top", Toast.LENGTH_SHORT).show();
             }
 
             public void onSwipeRight() {
                 //Toast.makeText(SideMenu.this, "right", Toast.LENGTH_SHORT).show();
-                //nav.toggleLeftDrawer();
+                //navigationDrawer.toggleLeftDrawer();
 
             }
 
             public void onSwipeLeft() {
                 //  Toast.makeText(SideMenu.this, "left", Toast.LENGTH_SHORT).show();
-                nav.toggleLeftDrawer();
+                navigationDrawer.toggleLeftDrawer();
             }
 
             public void onSwipeBottom() {
@@ -82,25 +78,24 @@ public class NavigationActivity extends FragmentActivity implements View.OnClick
         });
 
 
-        focusimage_home = (View) nav.findViewById(R.id.focusimage_home);
-        focusimage_switch_merchant = (View) nav.findViewById(R.id.focusimage_switch_merchant);
-        focusimage_myorders = (View) nav.findViewById(R.id.focusimage_myorders);
-        focusimage_chat = (View) nav.findViewById(R.id.focusimage_chat);
-        focusimage_setting = (View) nav.findViewById(R.id.focusimage_setting);
-        focusimage_invite_friends = (View) nav.findViewById(R.id.focusimage_invite_friends);
-        focusimage_social_media_sharing = (View) nav.findViewById(R.id.focusimage_social_media_sharing);
-        focusimage_offers = (View) nav.findViewById(R.id.focusimage_offers);
+        focusimage_home = (View) navigationDrawer.findViewById(R.id.focusimage_home);
+        focusimage_switch_merchant = (View) navigationDrawer.findViewById(R.id.focusimage_switch_merchant);
+        focusimage_myorders = (View) navigationDrawer.findViewById(R.id.focusimage_myorders);
+        focusimage_chat = (View) navigationDrawer.findViewById(R.id.focusimage_chat);
+        focusimage_setting = (View) navigationDrawer.findViewById(R.id.focusimage_setting);
+        focusimage_invite_friends = (View) navigationDrawer.findViewById(R.id.focusimage_invite_friends);
+        focusimage_social_media_sharing = (View) navigationDrawer.findViewById(R.id.focusimage_social_media_sharing);
+        focusimage_offers = (View) navigationDrawer.findViewById(R.id.focusimage_offers);
 
 
-        home = (LinearLayout) nav.findViewById(R.id.home);
-
-        switch_merchant = (LinearLayout) nav.findViewById(R.id.switch_merchant);
-        myorders = (LinearLayout) nav.findViewById(R.id.myorders);
-        chat = (LinearLayout) nav.findViewById(R.id.chat);
-        setting = (LinearLayout) nav.findViewById(R.id.setting);
-        invite_friends = (LinearLayout) nav.findViewById(R.id.invite_friends);
-        social_media_sharing = (LinearLayout) nav.findViewById(R.id.social_media_sharing);
-        offers = (LinearLayout) nav.findViewById(R.id.offers);
+        home = (LinearLayout) navigationDrawer.findViewById(R.id.home);
+        switch_merchant = (LinearLayout) navigationDrawer.findViewById(R.id.switch_merchant);
+        myorders = (LinearLayout) navigationDrawer.findViewById(R.id.myorders);
+        chat = (LinearLayout) navigationDrawer.findViewById(R.id.chat);
+        setting = (LinearLayout) navigationDrawer.findViewById(R.id.setting);
+        invite_friends = (LinearLayout) navigationDrawer.findViewById(R.id.invite_friends);
+        social_media_sharing = (LinearLayout) navigationDrawer.findViewById(R.id.social_media_sharing);
+        offers = (LinearLayout) navigationDrawer.findViewById(R.id.offers);
 
         switch_merchant.setOnClickListener(this);
         myorders.setOnClickListener(this);
@@ -119,24 +114,24 @@ public class NavigationActivity extends FragmentActivity implements View.OnClick
         switch (v.getId()) {
 
             case R.id.drawer_icon:
-                ft = fmr.beginTransaction().replace(R.id.frame, new DashBoardParentFragment());
-                ft.commit();
-                nav.toggleLeftDrawer();
+                fragmentTransaction = fragmentManager.beginTransaction().replace(R.id.frame, new DashBoardParentFragment());
+                fragmentTransaction.commit();
+                navigationDrawer.toggleLeftDrawer();
                 break;
 
             case R.id.home:
-                ft = fmr.beginTransaction().replace(R.id.frame, new DashBoardParentFragment());
-                ft.commit();
-                nav.toggleLeftDrawer();
+                fragmentTransaction = fragmentManager.beginTransaction().replace(R.id.frame, new DashBoardParentFragment());
+                fragmentTransaction.commit();
+                navigationDrawer.toggleLeftDrawer();
                 setVisibility(R.id.home);
                 break;
             case R.id.switch_merchant:
                 setVisibility(R.id.switch_merchant);
                 break;
             case R.id.myorders:
-                ft = fmr.beginTransaction().replace(R.id.frame, new OrderHistoryFragment());
-                ft.commit();
-                nav.toggleLeftDrawer();
+                fragmentTransaction = fragmentManager.beginTransaction().replace(R.id.frame, new OrderHistoryFragment());
+                fragmentTransaction.commit();
+                navigationDrawer.toggleLeftDrawer();
                 setVisibility(R.id.myorders);
                 break;
             case R.id.chat:
@@ -248,7 +243,7 @@ public class NavigationActivity extends FragmentActivity implements View.OnClick
 
 
     public void toggle() {
-        nav.toggleLeftDrawer();
+        navigationDrawer.toggleLeftDrawer();
 
     }
 }
