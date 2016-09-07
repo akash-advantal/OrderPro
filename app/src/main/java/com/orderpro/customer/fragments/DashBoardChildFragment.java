@@ -16,7 +16,6 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import com.merchant.orderpro.R;
 import com.orderpro.customer.DummyData;
 import com.orderpro.customer.adapter.DashBoardAdapter;
@@ -195,7 +194,7 @@ public class DashBoardChildFragment extends Fragment implements View.OnClickList
 //            Toast.makeText(getActivity(), value, Toast.LENGTH_SHORT).show();
             horizontalscroll.setVisibility(View.GONE);
 
-            ddobj.initChildData();
+            ddobj.initParentData();
             mAdapter.notifyDataSetChanged();
 
         }
