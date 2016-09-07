@@ -9,7 +9,7 @@
         android:id="@+id/layputone"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#394850"
+        android:background="#0174df"
         android:orientation="vertical">
 
         <LinearLayout
@@ -22,27 +22,27 @@
             <ImageView
                 android:id="@+id/iv_back"
                 android:layout_width="25dp"
-                android:layout_height="25dp"
+                android:layout_height="30dp"
                 android:layout_weight="0.1"
-                android:background="@drawable/arrow_back" />
+                android:background="@drawable/back_arrows_white" />
 
             <com.orderpro.customer.customfonts.Custom_text
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginLeft="10dp"
+                android:layout_marginLeft="20dp"
                 android:layout_weight="2.5"
                 android:text="Woman, Dresses"
                 android:textColor="#ffffff"
                 android:textSize="18dp" />
-
+            <!--njknsnfnsnf-->
             <ImageView
                 android:layout_width="25dp"
                 android:layout_height="25dp"
                 android:layout_gravity="right|center"
                 android:layout_marginLeft="40dp"
                 android:layout_weight="0.1"
-                android:background="@drawable/icon_cart" />
+                android:background="@drawable/icon_cart_wh" />
         </LinearLayout>
 
         <LinearLayout
@@ -168,7 +168,7 @@
                         android:layout_marginLeft="10dp"
                         android:background="#000" />
 
-                    <com.orderpro.customer.customfonts.Custom_Txt_Bold
+                    <com.orderpro.customer.view.Custom_Txt_Bold
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
@@ -192,7 +192,7 @@
                         android:layout_height="0.5px"
                         android:background="#000000" />
 
-                    <com.orderpro.customer.customfonts.Custom_text
+                    <com.orderpro.customer.view.custom_text
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:padding="10dp"
@@ -223,7 +223,7 @@
                         android:layout_marginRight="2dp"
                         android:background="@drawable/color_drop" />
 
-                    <com.orderpro.customer.customfonts.Custom_Txt_Bold
+                    <com.orderpro.customer.view.Custom_Txt_Bold
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
@@ -240,7 +240,7 @@
                     android:gravity="center"
                     android:padding="10dp">
 
-                    <com.orderpro.customer.customfonts.Custom_text
+                    <com.orderpro.customer.view.custom_text
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Choose a colour for item"

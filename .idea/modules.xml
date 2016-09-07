@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Akash.iml" filepath="$PROJECT_DIR$/Akash.iml" />
       <module fileurl="file://$PROJECT_DIR$/OrderPro.iml" filepath="$PROJECT_DIR$/OrderPro.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
