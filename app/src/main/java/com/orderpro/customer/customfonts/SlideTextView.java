@@ -17,7 +17,7 @@ import android.view.View;
 
 @SuppressLint("DrawAllocation")
 public class SlideTextView extends View {
-	private String showText = " < < " + " Slide Left " + " > > ";
+	private String showText = "Swipe Left";
 //	<com.orderpro.customer.customfonts.SlideTextView
 
 	private Paint paint;
@@ -31,7 +31,7 @@ public class SlideTextView extends View {
 	private int extraPaddingTop = PixValue.dip.valueOf(1f);
 
 	// ����������Ҫͨ��xml�ļ�������
-	private int textSize = PixValue.sp.valueOf(26); // �ֺ�
+	private int textSize = PixValue.sp.valueOf(11); // �ֺ�
 	private int textColor = Color.WHITE; // ������ɫ
 
 	private int textWidth, textHeight;

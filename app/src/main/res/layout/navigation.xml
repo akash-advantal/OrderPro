@@ -17,7 +17,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="30dp"
-            android:layout_marginTop="60dp"
+            android:layout_marginTop="45dp"
 
             android:orientation="horizontal">
 
@@ -47,11 +47,12 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/linearLayout6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="30dp"
-            android:layout_marginTop="120dp"
 
+            android:layout_marginTop="105dp"
             android:orientation="horizontal">
 
             <View
@@ -86,9 +87,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="30dp"
-
-
-            android:layout_marginTop="180dp"
+            android:layout_marginTop="165dp"
             android:orientation="horizontal">
 
             <View
@@ -119,12 +118,12 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/linearLayout5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="30dp"
-            android:layout_marginTop="240dp"
-            android:orientation="horizontal"
-            android:id="@+id/linearLayout5">
+            android:layout_marginTop="225dp"
+            android:orientation="horizontal">
 
 
             <View
@@ -158,13 +157,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="30dp"
-            android:layout_marginTop="300dp"
+            android:layout_marginTop="285dp"
 
             android:orientation="horizontal">
 
 
             <View
-                android:id="@+id/focusimage_setting"
+                android:id="@+id/focusimage_myfav"
                 android:layout_width="5dp"
                 android:layout_height="30dp"
 
@@ -174,7 +173,7 @@
                 android:visibility="gone" />
 
             <LinearLayout
-                android:id="@+id/setting"
+                android:id="@+id/myfav"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
 
@@ -184,7 +183,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
-                    android:text="Setting"
+                    android:text="My Favourites"
                     android:textColor="@android:color/white"
                     android:textSize="20sp" />
             </LinearLayout>
@@ -197,7 +196,44 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="30dp"
 
-            android:layout_marginTop="360dp"
+            android:layout_marginTop="345dp"
+            android:orientation="horizontal">
+
+
+            <View
+                android:id="@+id/focusimage_offers"
+                android:layout_width="5dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="15dp"
+                android:background="@drawable/view_round_corners"
+
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/offers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_gravity="center">
+
+                <com.orderpro.customer.customfonts.Custom_text
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="Offers"
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/invite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+
+            android:layout_marginTop="405dp"
             android:orientation="horizontal">
 
 
@@ -216,6 +252,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
 
+
                 android:layout_gravity="center">
 
                 <com.orderpro.customer.customfonts.Custom_text
@@ -226,20 +263,20 @@
                     android:textColor="@android:color/white"
                     android:textSize="20sp" />
             </LinearLayout>
-
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/linearLayout7"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="30dp"
-            android:layout_marginTop="420dp"
 
+            android:layout_marginTop="465dp"
             android:orientation="horizontal">
 
 
             <View
-                android:id="@+id/focusimage_social_media_sharing"
+                android:id="@+id/focusimage_settings"
                 android:layout_width="5dp"
                 android:layout_height="30dp"
 
@@ -249,7 +286,7 @@
                 android:visibility="gone" />
 
             <LinearLayout
-                android:id="@+id/social_media_sharing"
+                android:id="@+id/settings"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
 
@@ -260,7 +297,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
-                    android:text="Social Media Sharing"
+                    android:text="Settings"
                     android:textColor="@android:color/white"
                     android:textSize="20sp" />
             </LinearLayout>
@@ -272,12 +309,12 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="30dp"
 
-            android:layout_marginTop="480dp"
+            android:layout_marginTop="525dp"
             android:orientation="horizontal">
 
 
             <View
-                android:id="@+id/focusimage_offers"
+                android:id="@+id/focusimage_support"
                 android:layout_width="5dp"
                 android:layout_height="30dp"
 
@@ -287,7 +324,7 @@
                 android:visibility="gone" />
 
             <LinearLayout
-                android:id="@+id/offers"
+                android:id="@+id/support"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
 
@@ -298,22 +335,33 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
-                    android:text="Offers"
+                    android:text="Support"
                     android:textColor="@android:color/white"
                     android:textSize="20sp" />
             </LinearLayout>
         </LinearLayout>
 
-        <com.orderpro.customer.customfonts.SlideTextView
-            android:id="@+id/textView3"
-            android:layout_marginTop="10dp"
+        <ImageView
+            android:id="@+id/imageView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-                android:paddingBottom="15dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/linearLayout7"
+            android:layout_marginEnd="47dp"
+            android:layout_marginRight="47dp"
+            android:src="@drawable/swipe_left" />
 
-            android:layout_below="@+id/linearLayout2"
-            android:layout_toRightOf="@+id/linearLayout5"
-            android:layout_toEndOf="@+id/linearLayout5" />
+        <com.orderpro.customer.customfonts.SlideTextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/imageView"
+            android:layout_alignStart="@+id/imageView"
+            android:layout_alignTop="@+id/linearLayout2"
+            android:paddingBottom="10dp"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
 
     </RelativeLayout>
 </LinearLayout>

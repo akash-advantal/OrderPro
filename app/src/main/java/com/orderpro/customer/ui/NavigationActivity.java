@@ -23,9 +23,9 @@ import java.util.ArrayList;
  */
 public class NavigationActivity extends FragmentActivity implements View.OnClickListener {
 
-    LinearLayout switch_merchant, myorders, chat, setting, invite_friends, social_media_sharing, offers, home;
-    View focusimage_switch_merchant, focusimage_myorders, focusimage_chat, focusimage_setting, focusimage_invite_friends,
-            focusimage_social_media_sharing, focusimage_offers, focusimage_home;
+    LinearLayout switch_merchant, myorders, chat, settings, invite_friends, support, offers, home, myfav;
+    View focusimage_switch_merchant, focusimage_myorders, focusimage_chat, focusimage_settings, focusimage_invite_friends,
+            focusimage_support, focusimage_offers, focusimage_home, focusimage_myfav;
 
     FragmentManager fragmentManager;
     SimpleSideDrawer navigationDrawer;
@@ -82,9 +82,10 @@ public class NavigationActivity extends FragmentActivity implements View.OnClick
         focusimage_switch_merchant = (View) navigationDrawer.findViewById(R.id.focusimage_switch_merchant);
         focusimage_myorders = (View) navigationDrawer.findViewById(R.id.focusimage_myorders);
         focusimage_chat = (View) navigationDrawer.findViewById(R.id.focusimage_chat);
-        focusimage_setting = (View) navigationDrawer.findViewById(R.id.focusimage_setting);
+        focusimage_myfav = (View) navigationDrawer.findViewById(R.id.focusimage_myfav);
+        focusimage_settings = (View) navigationDrawer.findViewById(R.id.focusimage_settings);
         focusimage_invite_friends = (View) navigationDrawer.findViewById(R.id.focusimage_invite_friends);
-        focusimage_social_media_sharing = (View) navigationDrawer.findViewById(R.id.focusimage_social_media_sharing);
+        focusimage_support = (View) navigationDrawer.findViewById(R.id.focusimage_support);
         focusimage_offers = (View) navigationDrawer.findViewById(R.id.focusimage_offers);
 
 
@@ -92,17 +93,19 @@ public class NavigationActivity extends FragmentActivity implements View.OnClick
         switch_merchant = (LinearLayout) navigationDrawer.findViewById(R.id.switch_merchant);
         myorders = (LinearLayout) navigationDrawer.findViewById(R.id.myorders);
         chat = (LinearLayout) navigationDrawer.findViewById(R.id.chat);
-        setting = (LinearLayout) navigationDrawer.findViewById(R.id.setting);
+        myfav = (LinearLayout) navigationDrawer.findViewById(R.id.myfav);
+        settings = (LinearLayout) navigationDrawer.findViewById(R.id.settings);
         invite_friends = (LinearLayout) navigationDrawer.findViewById(R.id.invite_friends);
-        social_media_sharing = (LinearLayout) navigationDrawer.findViewById(R.id.social_media_sharing);
+        support = (LinearLayout) navigationDrawer.findViewById(R.id.support);
         offers = (LinearLayout) navigationDrawer.findViewById(R.id.offers);
 
         switch_merchant.setOnClickListener(this);
         myorders.setOnClickListener(this);
         chat.setOnClickListener(this);
-        setting.setOnClickListener(this);
+        myfav.setOnClickListener(this);
+        settings.setOnClickListener(this);
         invite_friends.setOnClickListener(this);
-        social_media_sharing.setOnClickListener(this);
+        support.setOnClickListener(this);
         offers.setOnClickListener(this);
         home.setOnClickListener(this);
 
@@ -137,17 +140,20 @@ public class NavigationActivity extends FragmentActivity implements View.OnClick
             case R.id.chat:
                 setVisibility(R.id.chat);
                 break;
-            case R.id.setting:
-                setVisibility(R.id.setting);
+            case R.id.settings:
+                setVisibility(R.id.settings);
                 break;
             case R.id.invite_friends:
                 setVisibility(R.id.invite_friends);
                 break;
-            case R.id.social_media_sharing:
-                setVisibility(R.id.social_media_sharing);
+            case R.id.support:
+                setVisibility(R.id.support);
                 break;
             case R.id.offers:
                 setVisibility(R.id.offers);
+                break;
+            case R.id.myfav:
+                setVisibility(R.id.myfav);
                 break;
         }
 
@@ -162,80 +168,107 @@ public class NavigationActivity extends FragmentActivity implements View.OnClick
                 focusimage_switch_merchant.setVisibility(View.GONE);
                 focusimage_myorders.setVisibility(View.GONE);
                 focusimage_chat.setVisibility(View.GONE);
-                focusimage_setting.setVisibility(View.GONE);
+                focusimage_settings.setVisibility(View.GONE);
                 focusimage_offers.setVisibility(View.GONE);
-                focusimage_social_media_sharing.setVisibility(View.GONE);
+                focusimage_support.setVisibility(View.GONE);
                 focusimage_invite_friends.setVisibility(View.GONE);
+                focusimage_myfav.setVisibility(View.GONE);
                 break;
             case R.id.switch_merchant:
+
                 focusimage_switch_merchant.setVisibility(View.VISIBLE);
                 focusimage_home.setVisibility(View.GONE);
                 focusimage_myorders.setVisibility(View.GONE);
                 focusimage_chat.setVisibility(View.GONE);
-                focusimage_setting.setVisibility(View.GONE);
+                focusimage_settings.setVisibility(View.GONE);
                 focusimage_offers.setVisibility(View.GONE);
-                focusimage_social_media_sharing.setVisibility(View.GONE);
+                focusimage_support.setVisibility(View.GONE);
                 focusimage_invite_friends.setVisibility(View.GONE);
+                focusimage_myfav.setVisibility(View.GONE);
+
                 break;
             case R.id.myorders:
                 focusimage_myorders.setVisibility(View.VISIBLE);
                 focusimage_home.setVisibility(View.GONE);
                 focusimage_switch_merchant.setVisibility(View.GONE);
                 focusimage_chat.setVisibility(View.GONE);
-                focusimage_setting.setVisibility(View.GONE);
+                focusimage_settings.setVisibility(View.GONE);
                 focusimage_offers.setVisibility(View.GONE);
-                focusimage_social_media_sharing.setVisibility(View.GONE);
+                focusimage_support.setVisibility(View.GONE);
                 focusimage_invite_friends.setVisibility(View.GONE);
+                focusimage_myfav.setVisibility(View.GONE);
+
                 break;
             case R.id.chat:
                 focusimage_chat.setVisibility(View.VISIBLE);
                 focusimage_home.setVisibility(View.GONE);
                 focusimage_myorders.setVisibility(View.GONE);
                 focusimage_switch_merchant.setVisibility(View.GONE);
-                focusimage_setting.setVisibility(View.GONE);
+                focusimage_settings.setVisibility(View.GONE);
                 focusimage_offers.setVisibility(View.GONE);
-                focusimage_social_media_sharing.setVisibility(View.GONE);
+                focusimage_support.setVisibility(View.GONE);
+                focusimage_invite_friends.setVisibility(View.GONE);
+                focusimage_myfav.setVisibility(View.GONE);
+
+                break;
+            case R.id.myfav:
+                focusimage_myfav.setVisibility(View.VISIBLE);
+                focusimage_chat.setVisibility(View.GONE);
+                focusimage_home.setVisibility(View.GONE);
+                focusimage_myorders.setVisibility(View.GONE);
+                focusimage_switch_merchant.setVisibility(View.GONE);
+                focusimage_settings.setVisibility(View.GONE);
+                focusimage_offers.setVisibility(View.GONE);
+                focusimage_support.setVisibility(View.GONE);
                 focusimage_invite_friends.setVisibility(View.GONE);
                 break;
-            case R.id.setting:
+            case R.id.settings:
                 focusimage_home.setVisibility(View.GONE);
-                focusimage_setting.setVisibility(View.VISIBLE);
+                focusimage_settings.setVisibility(View.VISIBLE);
                 focusimage_chat.setVisibility(View.GONE);
                 focusimage_myorders.setVisibility(View.GONE);
                 focusimage_switch_merchant.setVisibility(View.GONE);
                 focusimage_offers.setVisibility(View.GONE);
-                focusimage_social_media_sharing.setVisibility(View.GONE);
+                focusimage_support.setVisibility(View.GONE);
                 focusimage_invite_friends.setVisibility(View.GONE);
+                focusimage_myfav.setVisibility(View.GONE);
+
                 break;
             case R.id.offers:
                 focusimage_offers.setVisibility(View.VISIBLE);
                 focusimage_home.setVisibility(View.GONE);
-                focusimage_setting.setVisibility(View.GONE);
+                focusimage_settings.setVisibility(View.GONE);
                 focusimage_chat.setVisibility(View.GONE);
                 focusimage_myorders.setVisibility(View.GONE);
                 focusimage_switch_merchant.setVisibility(View.GONE);
-                focusimage_social_media_sharing.setVisibility(View.GONE);
+                focusimage_support.setVisibility(View.GONE);
                 focusimage_invite_friends.setVisibility(View.GONE);
+                focusimage_myfav.setVisibility(View.GONE);
+
                 break;
-            case R.id.social_media_sharing:
-                focusimage_social_media_sharing.setVisibility(View.VISIBLE);
+            case R.id.support:
+                focusimage_support.setVisibility(View.VISIBLE);
                 focusimage_home.setVisibility(View.GONE);
                 focusimage_offers.setVisibility(View.GONE);
-                focusimage_setting.setVisibility(View.GONE);
+                focusimage_settings.setVisibility(View.GONE);
                 focusimage_chat.setVisibility(View.GONE);
                 focusimage_myorders.setVisibility(View.GONE);
                 focusimage_switch_merchant.setVisibility(View.GONE);
                 focusimage_invite_friends.setVisibility(View.GONE);
+                focusimage_myfav.setVisibility(View.GONE);
+
                 break;
             case R.id.invite_friends:
                 focusimage_invite_friends.setVisibility(View.VISIBLE);
                 focusimage_home.setVisibility(View.GONE);
-                focusimage_social_media_sharing.setVisibility(View.GONE);
+                focusimage_support.setVisibility(View.GONE);
                 focusimage_offers.setVisibility(View.GONE);
-                focusimage_setting.setVisibility(View.GONE);
+                focusimage_settings.setVisibility(View.GONE);
                 focusimage_chat.setVisibility(View.GONE);
                 focusimage_myorders.setVisibility(View.GONE);
                 focusimage_switch_merchant.setVisibility(View.GONE);
+                focusimage_myfav.setVisibility(View.GONE);
+
                 break;
         }
 
