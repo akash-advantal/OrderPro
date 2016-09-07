@@ -94,12 +94,19 @@ public class DashBoardParentFragment extends Fragment implements BaseSliderView.
 
             @Override
             public void onPageSelected(int position) {
-                Toast.makeText(getActivity(), itemCategories.get(position).getCategory(), Toast.LENGTH_SHORT).show();
-                if (itemCategories.get(position).getCategory().equals("Appliances")) {
-                    String value = "Appliances";
-                    DashBoardChildFragment   dashBoardChildFragment1 = (DashBoardChildFragment)adapter.getPage(position);
-                    dashBoardChildFragment1.insertTextView(value);
-                }
+//                Toast.makeText(getActivity(), itemCategories.get(position).getCategory(), Toast.LENGTH_SHORT).show();
+//                if (itemCategories.get(position).getCategory().equals("Appliances")) {
+//                    String value = "Appliances";
+//                    DashBoardChildFragment   dashBoardChildFragment1 = (DashBoardChildFragment)adapter.getPage(position);
+//                    dashBoardChildFragment1.insertTextView(value);
+//                }
+//                    DashBoardChildFragment   dashBoardChildFragment1 = (DashBoardChildFragment)adapter.getPage(position);
+//                    dashBoardChildFragment1.insertTextView(value);
+
+                DashBoardChildFragment dashBoardChildFragment1 = (DashBoardChildFragment) adapter.getPage(position);
+                dashBoardChildFragment1.insertTextView(itemCategories.get(position).getCategory());
+                dashBoardChildFragment1.hideTitleBar();
+
             }
 
             @Override
@@ -181,7 +188,6 @@ public class DashBoardParentFragment extends Fragment implements BaseSliderView.
 //''''''''''''''''''''''''''hiding slider close''''''''''''''''''''''''''''''''''
 
     private boolean isPanelShown() {
-
         return hiddenPanel.getVisibility() == View.VISIBLE;
     }
 
@@ -196,13 +202,10 @@ public class DashBoardParentFragment extends Fragment implements BaseSliderView.
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.drawer_icon:
-
                 navigationActivity.toggle();
-
                 break;
             case R.id.arrowdown:
                 slideUpDown(button_arrow);
-
                 break;
             case R.id.open_quik_orders:
                 Toast.makeText(getActivity(), "open_quik_orders", Toast.LENGTH_SHORT).show();
@@ -210,11 +213,9 @@ public class DashBoardParentFragment extends Fragment implements BaseSliderView.
             case R.id.open_notification:
 //                Toast.makeText(getActivity(), "open_notification", Toast.LENGTH_SHORT).show();
                 startActivity(new Intent(getActivity(), NotificationActivity.class));
-
                 break;
             case R.id.open_chat:
                 Toast.makeText(getActivity(), "open_chat", Toast.LENGTH_SHORT).show();
-
                 break;
 
         }

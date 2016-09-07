@@ -29,28 +29,25 @@ import com.orderpro.customer.util.RecyclerItemClickListener;
 public class DashBoardChildFragment extends Fragment implements View.OnClickListener {
 
     public RecyclerView mRecyclerView;
-    //    private TextView list_title;
     public LinearLayout insertlayout;
     public HorizontalScrollView horizontalscroll;
-    // private ArrayList<ItemDataDashBoardList> itemData = new ArrayList<>();
-    //TextView tv, tv1;
     public DummyData ddobj = new DummyData();
     public TextView tv_a, tv_b, tv_c, tv_d, tv_e;
     public ImageView iv_a, iv_b, iv_c, iv_d;
     public DashBoardAdapter mAdapter;
-//    TextView tv_f;
+    //    TextView tv_f;
+    View v;
 
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
-        View v = inflater.inflate(R.layout.fragment_dashboard, container, false);
+        v = inflater.inflate(R.layout.fragment_dashboard, container, false);
         mRecyclerView = (RecyclerView) v.findViewById(R.id.Recyclerview);
         insertlayout = (LinearLayout) v.findViewById(R.id.insertlayout);
         horizontalscroll = (HorizontalScrollView) v.findViewById(R.id.horizontalscroll);
 
+//       insertTextView("Electronics");
         ddobj.initParentData();
-
-//        tv_f = (TextView) v.findViewById(R.id.tv_f);
         tv_a = (TextView) v.findViewById(R.id.tv_a);
         tv_b = (TextView) v.findViewById(R.id.tv_b);
         tv_c = (TextView) v.findViewById(R.id.tv_c);
@@ -69,7 +66,6 @@ public class DashBoardChildFragment extends Fragment implements View.OnClickList
         iv_c = (ImageView) v.findViewById(R.id.iv_c);
         iv_d = (ImageView) v.findViewById(R.id.iv_d);
 
-        //    list_title = (TextView) v.findViewById(R.id.list_title);
         // this is data fro recycler view
         // 2. set layoutManger
         mRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
@@ -103,11 +99,16 @@ public class DashBoardChildFragment extends Fragment implements View.OnClickList
 //        LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT,
 //                LinearLayout.LayoutParams.WRAP_CONTENT);
         //  tv.setBackgroundResource(R.drawable.button_rounded);
+//        horizontalscroll.setVisibility(View.VISIBLE);
+        horizontalscroll.setVisibility(View.VISIBLE);
 
-        if (value == "Mobiles") {
+        if (value.equals("Mobiles")) {
             horizontalscroll.setVisibility(View.VISIBLE);
+            horizontalscroll.fullScroll(HorizontalScrollView.FOCUS_LEFT);
+
             tv_a.setVisibility(View.VISIBLE);
             iv_a.setVisibility(View.VISIBLE);
+
             tv_a.setText(value);
             ddobj.initMobileData();
             mAdapter.notifyDataSetChanged();
@@ -134,22 +135,6 @@ public class DashBoardChildFragment extends Fragment implements View.OnClickList
 //            tv1.setTextSize(15);
 //            tv1.setText("  " + value + " > ");
 //            insertlayout.addView(tv1);
-
-        } else if (value.equals("Wearables")) {
-
-            Toast.makeText(getActivity(), value, Toast.LENGTH_SHORT).show();
-
-        } else if (value.equals("Components")) {
-
-            Toast.makeText(getActivity(), value, Toast.LENGTH_SHORT).show();
-
-        } else if (value.equals("Tablet")) {
-
-            Toast.makeText(getActivity(), value, Toast.LENGTH_SHORT).show();
-
-        } else if (value.equals("Camera")) {
-
-            Toast.makeText(getActivity(), value, Toast.LENGTH_SHORT).show();
 
         } else if (value.equals("Accessories")) {
 
@@ -180,30 +165,42 @@ public class DashBoardChildFragment extends Fragment implements View.OnClickList
         } else if (value.equals("Samsung S1")) {
             tv_e.setText(value);
             tv_e.setVisibility(View.VISIBLE);
-            horizontalscroll.fullScroll(HorizontalScrollView.FOCUS_RIGHT);
+            //horizontalscroll.fullScroll(HorizontalScrollView.FOCUS_RIGHT);
             ddobj.initChildData();
             mAdapter.notifyDataSetChanged();
+
+            horizontalscroll.fullScroll(HorizontalScrollView.FOCUS_RIGHT);
+
 
         } else if (value.equals("a")) {
 
             startActivity(new Intent(getActivity(), ProductActivity.class));
-            } else if (value.equals("Appliances")) {
+        } else if (value.equals("Appliances")) {
             ddobj.initAppliancesData();
+            mAdapter.notifyDataSetChanged();
+
+        } else if (value.equals("Electronics")) {
+            ddobj.initParentData();
             mAdapter.notifyDataSetChanged();
 
         } else if (value.equals("Home Entertainment")) {
             tv_a.setText(value);
             tv_a.setVisibility(View.VISIBLE);
             horizontalscroll.setVisibility(View.VISIBLE);
+
             ddobj.initChildData();
             mAdapter.notifyDataSetChanged();
 
-        }else {
+        } else {
+//            Toast.makeText(getActivity(), value, Toast.LENGTH_SHORT).show();
+            horizontalscroll.setVisibility(View.GONE);
 
-            Toast.makeText(getActivity(), value, Toast.LENGTH_SHORT).show();
+            ddobj.initChildData();
+            mAdapter.notifyDataSetChanged();
 
         }
     }
+
 
     @Override
     public void onClick(View v) {
@@ -222,13 +219,13 @@ public class DashBoardChildFragment extends Fragment implements View.OnClickList
 //                    ddobj.initMobileData();
 //                    mAdapter.notifyDataSetChanged();
 
-                tv_b.setVisibility(View.GONE);
-                tv_c.setVisibility(View.GONE);
-                tv_d.setVisibility(View.GONE);
-                tv_e.setVisibility(View.GONE);
-                iv_b.setVisibility(View.GONE);
-                iv_c.setVisibility(View.GONE);
-                iv_d.setVisibility(View.GONE);
+                tv_b.setVisibility(View.INVISIBLE);
+                tv_c.setVisibility(View.INVISIBLE);
+                tv_d.setVisibility(View.INVISIBLE);
+                tv_e.setVisibility(View.INVISIBLE);
+                iv_b.setVisibility(View.INVISIBLE);
+                iv_c.setVisibility(View.INVISIBLE);
+                iv_d.setVisibility(View.INVISIBLE);
 
                 break;
 
@@ -236,25 +233,25 @@ public class DashBoardChildFragment extends Fragment implements View.OnClickList
 //                Toast.makeText(getActivity(), tv_b.getText().toString(), Toast.LENGTH_SHORT).show();
                 insertTextView(tv_b.getText().toString());
 
-                tv_c.setVisibility(View.GONE);
-                tv_d.setVisibility(View.GONE);
-                tv_e.setVisibility(View.GONE);
-                iv_c.setVisibility(View.GONE);
-                iv_d.setVisibility(View.GONE);
+                tv_c.setVisibility(View.INVISIBLE);
+                tv_d.setVisibility(View.INVISIBLE);
+                tv_e.setVisibility(View.INVISIBLE);
+                iv_c.setVisibility(View.INVISIBLE);
+                iv_d.setVisibility(View.INVISIBLE);
                 break;
 
             case R.id.tv_c:
 //                Toast.makeText(getActivity(), tv_c.getText().toString(), Toast.LENGTH_SHORT).show();
                 insertTextView(tv_c.getText().toString());
-                tv_d.setVisibility(View.GONE);
-                tv_e.setVisibility(View.GONE);
-                iv_d.setVisibility(View.GONE);
+                tv_d.setVisibility(View.INVISIBLE);
+                tv_e.setVisibility(View.INVISIBLE);
+                iv_d.setVisibility(View.INVISIBLE);
                 break;
 
             case R.id.tv_d:
                 //  Toast.makeText(getActivity(), tv_d.getText().toString(), Toast.LENGTH_SHORT).show();
                 insertTextView(tv_d.getText().toString());
-                tv_e.setVisibility(View.GONE);
+                tv_e.setVisibility(View.INVISIBLE);
 
                 break;
             case R.id.tv_e:
@@ -267,4 +264,18 @@ public class DashBoardChildFragment extends Fragment implements View.OnClickList
 
     }
 
+    public void hideTitleBar() {
+
+//        horizontalscroll.fullScroll(HorizontalScrollView.FOCUS_RIGHT);
+        horizontalscroll.setVisibility(View.GONE);
+        tv_a.setVisibility(View.INVISIBLE);
+        iv_a.setVisibility(View.INVISIBLE);
+        tv_b.setVisibility(View.INVISIBLE);
+        iv_b.setVisibility(View.INVISIBLE);
+        tv_c.setVisibility(View.INVISIBLE);
+        iv_c.setVisibility(View.INVISIBLE);
+        tv_d.setVisibility(View.INVISIBLE);
+        iv_d.setVisibility(View.INVISIBLE);
+        tv_e.setVisibility(View.INVISIBLE);
+    }
 }
