@@ -11,13 +11,11 @@ import android.widget.LinearLayout;
 
 import com.merchant.orderpro.R;
 import com.navdrawer.SimpleSideDrawer;
-import com.orderpro.customer.bean.ItemCategories;
 import com.orderpro.customer.fragments.DashBoardParentFragment;
 import com.orderpro.customer.fragments.OrderHistoryFragment;
+import com.orderpro.customer.fragments.SettingsFragment;
+import com.orderpro.customer.fragments.SupportFragment;
 import com.orderpro.customer.util.OnSwipeTouchListener;
-
-import java.util.ArrayList;
-
 /**
  * Created by AKASH on 30-Aug-16.
  */
@@ -31,7 +29,7 @@ public class NavigationActivity extends FragmentActivity implements View.OnClick
     SimpleSideDrawer navigationDrawer;
 
     private Button navbtn;
-    private ArrayList<ItemCategories> itemCategories = new ArrayList<>();
+//    private ArrayList<ItemCategories> itemCategories = new ArrayList<>();
 
     //    private View hiddenPanel;
 //    private SliderLayout mDemoSlider;
@@ -49,7 +47,9 @@ public class NavigationActivity extends FragmentActivity implements View.OnClick
         navigationDrawer = new SimpleSideDrawer(this);
         initview();
 
+
     }
+
 
     public void initview() {
         navigationDrawer.setLeftBehindContentView(R.layout.navigation);
@@ -99,6 +99,7 @@ public class NavigationActivity extends FragmentActivity implements View.OnClick
         support = (LinearLayout) navigationDrawer.findViewById(R.id.support);
         offers = (LinearLayout) navigationDrawer.findViewById(R.id.offers);
 
+
         switch_merchant.setOnClickListener(this);
         myorders.setOnClickListener(this);
         chat.setOnClickListener(this);
@@ -110,7 +111,6 @@ public class NavigationActivity extends FragmentActivity implements View.OnClick
         home.setOnClickListener(this);
 
     }
-
     @Override
     public void onClick(View v) {
 
@@ -141,12 +141,18 @@ public class NavigationActivity extends FragmentActivity implements View.OnClick
                 setVisibility(R.id.chat);
                 break;
             case R.id.settings:
+                fragmentTransaction = fragmentManager.beginTransaction().replace(R.id.frame, new SettingsFragment());
+                fragmentTransaction.commit();
+                navigationDrawer.toggleLeftDrawer();
                 setVisibility(R.id.settings);
                 break;
             case R.id.invite_friends:
                 setVisibility(R.id.invite_friends);
                 break;
             case R.id.support:
+                fragmentTransaction = fragmentManager.beginTransaction().replace(R.id.frame, new SupportFragment());
+                fragmentTransaction.commit();
+                navigationDrawer.toggleLeftDrawer();
                 setVisibility(R.id.support);
                 break;
             case R.id.offers:
@@ -154,6 +160,7 @@ public class NavigationActivity extends FragmentActivity implements View.OnClick
                 break;
             case R.id.myfav:
                 setVisibility(R.id.myfav);
+
                 break;
         }
 
@@ -175,7 +182,6 @@ public class NavigationActivity extends FragmentActivity implements View.OnClick
                 focusimage_myfav.setVisibility(View.GONE);
                 break;
             case R.id.switch_merchant:
-
                 focusimage_switch_merchant.setVisibility(View.VISIBLE);
                 focusimage_home.setVisibility(View.GONE);
                 focusimage_myorders.setVisibility(View.GONE);
@@ -185,8 +191,8 @@ public class NavigationActivity extends FragmentActivity implements View.OnClick
                 focusimage_support.setVisibility(View.GONE);
                 focusimage_invite_friends.setVisibility(View.GONE);
                 focusimage_myfav.setVisibility(View.GONE);
-
                 break;
+
             case R.id.myorders:
                 focusimage_myorders.setVisibility(View.VISIBLE);
                 focusimage_home.setVisibility(View.GONE);
@@ -197,7 +203,6 @@ public class NavigationActivity extends FragmentActivity implements View.OnClick
                 focusimage_support.setVisibility(View.GONE);
                 focusimage_invite_friends.setVisibility(View.GONE);
                 focusimage_myfav.setVisibility(View.GONE);
-
                 break;
             case R.id.chat:
                 focusimage_chat.setVisibility(View.VISIBLE);
@@ -209,7 +214,6 @@ public class NavigationActivity extends FragmentActivity implements View.OnClick
                 focusimage_support.setVisibility(View.GONE);
                 focusimage_invite_friends.setVisibility(View.GONE);
                 focusimage_myfav.setVisibility(View.GONE);
-
                 break;
             case R.id.myfav:
                 focusimage_myfav.setVisibility(View.VISIBLE);
@@ -222,6 +226,7 @@ public class NavigationActivity extends FragmentActivity implements View.OnClick
                 focusimage_support.setVisibility(View.GONE);
                 focusimage_invite_friends.setVisibility(View.GONE);
                 break;
+
             case R.id.settings:
                 focusimage_home.setVisibility(View.GONE);
                 focusimage_settings.setVisibility(View.VISIBLE);
@@ -232,8 +237,8 @@ public class NavigationActivity extends FragmentActivity implements View.OnClick
                 focusimage_support.setVisibility(View.GONE);
                 focusimage_invite_friends.setVisibility(View.GONE);
                 focusimage_myfav.setVisibility(View.GONE);
-
                 break;
+
             case R.id.offers:
                 focusimage_offers.setVisibility(View.VISIBLE);
                 focusimage_home.setVisibility(View.GONE);
@@ -244,8 +249,8 @@ public class NavigationActivity extends FragmentActivity implements View.OnClick
                 focusimage_support.setVisibility(View.GONE);
                 focusimage_invite_friends.setVisibility(View.GONE);
                 focusimage_myfav.setVisibility(View.GONE);
-
                 break;
+
             case R.id.support:
                 focusimage_support.setVisibility(View.VISIBLE);
                 focusimage_home.setVisibility(View.GONE);
@@ -256,8 +261,8 @@ public class NavigationActivity extends FragmentActivity implements View.OnClick
                 focusimage_switch_merchant.setVisibility(View.GONE);
                 focusimage_invite_friends.setVisibility(View.GONE);
                 focusimage_myfav.setVisibility(View.GONE);
-
                 break;
+
             case R.id.invite_friends:
                 focusimage_invite_friends.setVisibility(View.VISIBLE);
                 focusimage_home.setVisibility(View.GONE);
@@ -268,15 +273,16 @@ public class NavigationActivity extends FragmentActivity implements View.OnClick
                 focusimage_myorders.setVisibility(View.GONE);
                 focusimage_switch_merchant.setVisibility(View.GONE);
                 focusimage_myfav.setVisibility(View.GONE);
-
                 break;
+
         }
+
 
     }
 
 
+
     public void toggle() {
         navigationDrawer.toggleLeftDrawer();
-
     }
 }

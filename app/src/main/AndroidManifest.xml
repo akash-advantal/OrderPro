@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.merchant.orderpro">
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -46,7 +47,26 @@
             android:name="com.orderpro.customer.ui.CartItemActivity"
 
             android:windowSoftInputMode="adjustNothing" />
+        <activity
+            android:name="com.orderpro.customer.ui.ContactusActivity"
 
+            android:windowSoftInputMode="adjustNothing" />
+        <activity
+            android:name="com.orderpro.customer.ui.TermsofuseActivity"
+
+            android:windowSoftInputMode="adjustNothing" />
+        <activity
+            android:name="com.orderpro.customer.ui.MyProfileActivity"
+
+            android:windowSoftInputMode="adjustNothing" />
+        <activity
+            android:name="com.orderpro.customer.ui.ChangePassword"
+
+            android:windowSoftInputMode="adjustNothing" />
+        <activity
+            android:name="com.orderpro.customer.ui.MerchantDetailsActivity"
+
+            android:windowSoftInputMode="adjustNothing" />
 
 
         <activity

@@ -8,8 +8,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.ImageView;
-import android.widget.TextView;
 
 import com.merchant.orderpro.R;
 import com.orderpro.customer.bean.CartData;
@@ -46,20 +44,20 @@ public class CartItemAdapter extends BaseAdapter {
         @Override
         public View getView(int position, View convertView, ViewGroup parent) {
         LayoutInflater lif= (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        View v= lif.inflate(R.layout.your_orders_item, null);
-
-            ImageView item_image=(ImageView) v.findViewById(R.id.item_image);
-           TextView item_title=(TextView) v.findViewById(R.id.item_title);
-            TextView item_content=(TextView) v.findViewById(R.id.item_content);
-            TextView item_decs=(TextView) v.findViewById(R.id.item_decs);
-
-
-            CartData cartData= cartlist.get(position);
-            item_title.setText(cartData.getItem_title());
-            item_content.setText(cartData.getItem_content());
-            item_decs.setText(cartData.getItem_decs());
-
-            item_image.setBackgroundResource(cartData.getItem_image());
+        View v= lif.inflate(R.layout.my_cart_item, null);
+//
+//            ImageView item_image=(ImageView) v.findViewById(R.id.item_image);
+//           TextView item_title=(TextView) v.findViewById(R.id.item_title);
+//            TextView item_content=(TextView) v.findViewById(R.id.item_content);
+//            TextView item_decs=(TextView) v.findViewById(R.id.item_decs);
+//
+//
+//            CartData cartData= cartlist.get(position);
+//            item_title.setText(cartData.getItem_title());
+//            item_content.setText(cartData.getItem_content());
+//            item_decs.setText(cartData.getItem_decs());
+//
+//            item_image.setBackgroundResource(cartData.getItem_image());
 
 
             return v;

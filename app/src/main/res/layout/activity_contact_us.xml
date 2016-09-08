@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/registration_back"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/top_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/back_arrows" />
+
+        <com.orderpro.customer.customfonts.Custom_text
+            android:id="@+id/custom_text2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:gravity="center"
+            android:layout_centerInParent="true"
+            android:text="Contact Us:"
+            android:textColor="#ffffff"
+            android:textSize="22dp" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageView2"
+        android:layout_margin="10dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <com.orderpro.customer.customfonts.CustomEditTxt
+                android:id="@+id/query"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_weight="0.9"
+                android:background="@drawable/edittext_bottom_border"
+                android:focusable="false"
+                android:focusableInTouchMode="true"
+                android:gravity="center"
+                android:hint="What Seems to be the Issue ?"
+                android:inputType="text"
+                android:maxLines="1"
+                android:padding="10dp"
+                android:textColor="#ffffff"
+                android:textColorHint="#75ffffff"
+                android:textCursorDrawable="@null" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <com.orderpro.customer.customfonts.CustomEditTxt
+                android:id="@+id/input_name1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_weight="0.9"
+                android:background="@drawable/edittext_bottom_border"
+                android:focusable="false"
+                android:focusableInTouchMode="true"
+                android:gravity="center"
+                android:hint="Type Your Query Here !"
+                android:inputType="textWebEmailAddress"
+                android:maxLines="1"
+                android:padding="10dp"
+                android:textColor="#ffffff"
+                android:textColorHint="#75ffffff"
+                android:textCursorDrawable="@drawable/edit_text_cursor_color" />
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <com.orderpro.customer.customfonts.CustomEditTxt
+                android:id="@+id/input_name2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_weight="0.9"
+                android:background="@drawable/edittext_bottom_border"
+                android:focusable="false"
+                android:focusableInTouchMode="true"
+                android:gravity="center"
+                android:hint="Contact Details !"
+                android:inputType="phone"
+                android:maxLines="1"
+                android:padding="10dp"
+                android:textColor="#ffffff"
+                android:textColorHint="#75ffffff"
+                android:textCursorDrawable="@drawable/edit_text_cursor_color" />
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical"
+            android:weightSum="1">
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="20dp"
+                android:background="@drawable/rounded_btn"
+                android:gravity="center"
+                android:text="Email Us"
+                android:textAllCaps="false"
+                android:textColor="#ffffff" />
+
+            <Button
+                android:id="@+id/button1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="20dp"
+                android:background="@drawable/rounded_btn"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="510, 6th Floor, Shagun Complex , AB Road, Vijay Nagar, Indore - 452010, Above Apna Sweets (Map)\n Tool Free : 18001027799"
+                android:textAllCaps="false"
+                android:textColor="#ffffff" />
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+    <ImageView
+
+        android:id="@+id/imageView2"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_below="@+id/top_layout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/contact_us" />
+
+
+</RelativeLayout>

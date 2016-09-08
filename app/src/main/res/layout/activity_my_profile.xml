@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/registration_back"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/top_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/back_arrows" />
+
+        <com.orderpro.customer.customfonts.Custom_text
+            android:id="@+id/custom_text2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:gravity="center"
+            android:text="My Profile:"
+            android:textColor="#ffffff"
+            android:textSize="22dp" />
+
+    </RelativeLayout>
+
+
+    <ImageView
+        android:id="@+id/icon"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_below="@+id/top_layout"
+        android:layout_centerInParent="true"
+        android:background="@drawable/profileupdate_icon" />
+
+    <LinearLayout
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/icon"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <com.orderpro.customer.customfonts.CustomEditTxt
+                android:id="@+id/input_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:layout_weight="0.9"
+                android:background="@drawable/edittext_bottom_border"
+                android:focusable="false"
+                android:focusableInTouchMode="true"
+                android:gravity="center"
+                android:hint="Ayush Bhatnagar"
+                android:inputType="text"
+                android:maxLines="1"
+                android:padding="10dp"
+                android:textColor="#ffffff"
+                android:textColorHint="#75ffffff"
+                android:textCursorDrawable="@null" />
+
+            <!--<ImageView-->
+            <!--android:id="@+id/iv1"-->
+            <!--android:layout_width="30dp"-->
+            <!--android:layout_height="30dp"-->
+            <!--android:layout_gravity="center"-->
+            <!--android:layout_marginRight="5dp"-->
+            <!--android:background="@drawable/edit" />-->
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <com.orderpro.customer.customfonts.CustomEditTxt
+                android:id="@+id/input_name1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:layout_weight="0.9"
+                android:background="@drawable/edittext_bottom_border"
+                android:focusable="false"
+                android:focusableInTouchMode="true"
+                android:gravity="center"
+                android:hint="ayush45454@gmail.com"
+                android:inputType="textWebEmailAddress"
+                android:maxLines="1"
+                android:padding="10dp"
+                android:textColor="#ffffff"
+                android:textColorHint="#75ffffff"
+                android:textCursorDrawable="@drawable/edit_text_cursor_color" />
+
+            <!--<ImageView-->
+            <!--android:id="@+id/iv2"-->
+            <!--android:layout_width="30dp"-->
+            <!--android:layout_height="30dp"-->
+            <!--android:layout_gravity="center"-->
+            <!--android:layout_marginRight="5dp"-->
+            <!--android:background="@drawable/edit" />-->
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <com.orderpro.customer.customfonts.CustomEditTxt
+                android:id="@+id/input_name2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:layout_weight="0.9"
+                android:background="@drawable/edittext_bottom_border"
+                android:focusable="false"
+                android:focusableInTouchMode="true"
+                android:gravity="center"
+                android:hint="+91 7854855555"
+                android:inputType="phone"
+                android:maxLines="1"
+                android:padding="10dp"
+                android:textColor="#ffffff"
+                android:textColorHint="#75ffffff"
+                android:textCursorDrawable="@drawable/edit_text_cursor_color" />
+
+            <!--<ImageView-->
+            <!--android:id="@+id/iv3"-->
+            <!--android:layout_width="30dp"-->
+            <!--android:layout_height="30dp"-->
+            <!--android:layout_gravity="center"-->
+            <!--android:layout_marginRight="5dp"-->
+            <!--android:background="@drawable/edit" />-->
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <com.orderpro.customer.customfonts.CustomEditTxt
+                android:id="@+id/input_name3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:layout_weight="0.9"
+                android:background="@drawable/edittext_bottom_border"
+                android:focusable="false"
+                android:focusableInTouchMode="true"
+                android:gravity="center"
+                android:hint="Shagun Towers Indore"
+                android:inputType="textPostalAddress"
+                android:maxLines="1"
+                android:padding="10dp"
+                android:textColor="#ffffff"
+                android:textColorHint="#75ffffff"
+                android:textCursorDrawable="@drawable/edit_text_cursor_color" />
+
+            <!--<ImageView-->
+            <!--android:id="@+id/iv4"-->
+            <!--android:layout_width="30dp"-->
+            <!--android:layout_height="30dp"-->
+            <!--android:layout_gravity="center"-->
+            <!--android:layout_marginRight="5dp"-->
+            <!--android:background="@drawable/edit" />-->
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <com.orderpro.customer.customfonts.Custom_Btntxt
+        android:id="@+id/btn_signup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layout"
+        android:layout_centerInParent="true"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="30dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/button_color"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="Update"
+        android:textAllCaps="false"
+        android:textColor="#ffffff"
+        android:textSize="18dp" />
+
+</RelativeLayout>

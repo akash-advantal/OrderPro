@@ -38,7 +38,7 @@ public class CartItemActivity extends AppCompatActivity implements View.OnClickL
         cart.setVisibility(View.GONE);
         title = (TextView) findViewById(R.id.title);
         drawer_icon.setOnClickListener(this);
-        drawer_icon.setBackground(getResources().getDrawable(R.drawable.arrow_back));
+        drawer_icon.setBackground(getResources().getDrawable(R.drawable.back_arrows_white));
         title.setText("Your Cart Items");
         cartlist = ddobj.initCartList();
 

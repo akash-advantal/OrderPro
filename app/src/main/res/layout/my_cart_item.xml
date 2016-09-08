@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@drawable/rounded_corners"
+        android:weightSum="2">
+
+        <View
+            android:layout_width="1px"
+            android:layout_height="80dp"
+            android:layout_gravity="center"
+            android:layout_marginRight="5dp"
+            android:background="#000" />
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.5"
+            android:orientation="vertical">
+
+            <com.orderpro.customer.customfonts.Custom_Txt_Bold
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:padding="5dp"
+                android:text="Elegant Blue Shirt"
+                android:textColor="#000"
+                android:textSize="13dp" />
+
+            <com.orderpro.customer.customfonts.Custom_Txt_Bold
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:padding="5dp"
+                android:text="Seller - WS Retail"
+                android:textColor="#000"
+                android:textSize="13dp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.orderpro.customer.customfonts.Custom_Txt_Bold
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:padding="5dp"
+                    android:text=" ₹ 302.50"
+                    android:textColor="#000"
+                    android:textSize="20dp" />
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+                <TextView
+                    android:id="@+id/tv_cut"
+                    android:textSize="18sp"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="₹ 605.00" />
+
+    <TextView
+        android:id="@+id/discount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="50%"
+        android:textColor="#000"
+        android:textSize="16sp"
+        android:gravity="center"
+        android:layout_gravity="center"/>
+
+</LinearLayout>
+            </LinearLayout>
+
+            <com.orderpro.customer.customfonts.Custom_Txt_Bold
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:padding="5dp"
+                android:text="Delivered by 31, july, 2016"
+                android:textColor="#000"
+                android:textSize="13dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="0.5"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/iv"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_gravity="center"
+                android:background="@drawable/snewone" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+</RelativeLayout>

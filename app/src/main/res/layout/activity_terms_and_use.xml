@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/registration_back"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/top_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/back_arrows" />
+
+        <com.orderpro.customer.customfonts.Custom_text
+            android:id="@+id/custom_text2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:gravity="center"
+            android:text="Terms of Use:"
+            android:textColor="#ffffff"
+            android:textSize="22dp" />
+
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_gravity="center"
+        android:background="@drawable/termss" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="300dp"
+        android:layout_gravity="center"
+        android:background="@drawable/rounded_btn"
+
+        android:layout_margin="10dp">
+
+        <ScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="20dp"
+                android:text="      1.	This template legal document was produced and published by SEQ Legal LLP.
+2.	We control the copyright in this template, and you may only use this template in accordance with the licensing provisions in our terms and conditions. Those licensing provisions include an obligation to retain the SEQ Legal credit incorporated into the template.
+3.	The current version of our terms and conditions is available at: http://www.seqlegal.com/our-terms-and-conditions.
+4.	The current version of our terms and conditions is available at: http://www.seqlegal.com/our-terms-and-conditions.
+5.	The current version of our terms and conditions is available at: http://www.seqlegal.com/our-terms-and-conditions.
+6.	The current version of our terms and conditions is available at: http://www.seqlegal.com/our-terms-and-conditions.
+7.	The current version of our terms and conditions is available at: http://www.seqlegal.com/our-terms-and-conditions.
+8.	The current version of our terms and conditions is available at: http://www.seqlegal.com/our-terms-and-conditions.
+9.	If you would like to use this template without the SEQ Legal credit, you can purchase a licence to do so at: http://www.website-contracts.co.uk/seqlegal-licences.html
+"
+                android:textColor="#ffffff" />
+        </ScrollView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/rounded_btn"
+            android:text="Reject"
+            android:textAllCaps="false"
+            android:textColor="#ffffff"
+            android:textSize="18sp" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/rounded_btn"
+            android:text="Accept"
+            android:textAllCaps="false"
+            android:textColor="#ffffff"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

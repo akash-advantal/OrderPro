@@ -59,12 +59,6 @@ public class OrderHistoryFragment extends Fragment implements View.OnClickListen
         return view;
     }
 
-    @Override
-    public void onAttach(Context context) {
-        super.onAttach(context);
-        navigationActivity = (NavigationActivity) getActivity();
-    }
-
 
     @Override
     public void onClick(View v) {
@@ -80,7 +74,14 @@ public class OrderHistoryFragment extends Fragment implements View.OnClickListen
     }
 
 
-//    public void OrderHistory(ArrayList<OrderHistorydata> orderlist) {
-//        this.orderlist = orderlist;
-//    }
+
+
+
+
+    @Override
+    public void onAttach(Context context) {
+        super.onAttach(context);
+        navigationActivity = (NavigationActivity) getActivity();
+    }
+
 }
