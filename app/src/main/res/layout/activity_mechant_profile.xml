@@ -9,11 +9,12 @@
         android:id="@+id/top_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="10dp"
         android:orientation="horizontal">
 
         <ImageView
             android:id="@+id/iv_back"
-            android:layout_width="40dp"
+            android:layout_width="30dp"
             android:layout_height="40dp"
             android:src="@drawable/back_arrows" />
 
@@ -38,145 +39,155 @@
         android:layout_margin="10dp"
         android:background="@drawable/merchant_icon" />
 
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="10dp">
+        android:layout_height="wrap_content">
 
-        <TextView
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center"
-            android:padding="5dp"
-            android:text="Name :"
-            android:textColor="#75ffffff"
-            android:textSize="12sp" />
+            android:orientation="vertical">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:background="@drawable/rounded_btn"
-            android:gravity="center"
-            android:padding="10dp"
-            android:text="Ayush Bhatnagar"
-            android:textColor="#ffffff"
-            android:textSize="15sp" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="10dp">
 
-    </LinearLayout>
+                <com.orderpro.customer.customfonts.Custom_text
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="Name :"
+                    android:textColor="#75ffffff"
+                    android:textSize="12sp" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="5dp">
+                <com.orderpro.customer.customfonts.Custom_text
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/rounded_btn"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="Ayush Bhatnagar"
+                    android:textColor="#ffffff"
+                    android:textSize="15sp" />
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:padding="5dp"
-            android:text="Mobile No :"
-            android:textColor="#75ffffff"
-            android:textSize="12sp" />
+            </LinearLayout>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:background="@drawable/rounded_btn"
-            android:gravity="center"
-            android:padding="10dp"
-            android:text="+91 9891649455"
-            android:textColor="#ffffff"
-            android:textSize="15sp" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="5dp">
 
-    </LinearLayout>
+                <com.orderpro.customer.customfonts.Custom_text
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="Mobile No :"
+                    android:textColor="#75ffffff"
+                    android:textSize="12sp" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="5dp">
+                <com.orderpro.customer.customfonts.Custom_text
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/rounded_btn"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="+91 9891649455"
+                    android:textColor="#ffffff"
+                    android:textSize="15sp" />
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:padding="5dp"
-            android:text="Enail Address :"
-            android:textColor="#75ffffff"
-            android:textSize="12sp" />
+            </LinearLayout>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:background="@drawable/rounded_btn"
-            android:gravity="center"
-            android:padding="5dp"
-            android:text="ayush2432@gmail.com"
-            android:textColor="#ffffff"
-            android:textSize="15sp" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="5dp">
 
-    </LinearLayout>
+                <com.orderpro.customer.customfonts.Custom_text
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="Enail Address :"
+                    android:textColor="#75ffffff"
+                    android:textSize="12sp" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="5dp">
+                <com.orderpro.customer.customfonts.Custom_text
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/rounded_btn"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="ayush2432@gmail.com"
+                    android:textColor="#ffffff"
+                    android:textSize="15sp" />
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:padding="5dp"
-            android:text="DOB:"
-            android:textColor="#75ffffff"
-            android:textSize="12sp" />
+            </LinearLayout>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:background="@drawable/rounded_btn"
-            android:gravity="center"
-            android:padding="5dp"
-            android:text="13/12/1992"
-            android:textColor="#ffffff"
-            android:textSize="15sp" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="5dp">
 
-    </LinearLayout>
+                <com.orderpro.customer.customfonts.Custom_text
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="DOB:"
+                    android:textColor="#75ffffff"
+                    android:textSize="12sp" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="5dp">
+                <com.orderpro.customer.customfonts.Custom_text
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/rounded_btn"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="13/12/1992"
+                    android:textColor="#ffffff"
+                    android:textSize="15sp" />
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:padding="5dp"
-            android:text="Address :"
-            android:textColor="#75ffffff"
-            android:textSize="12sp" />
+            </LinearLayout>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:background="@drawable/rounded_btn"
-            android:gravity="center"
-            android:padding="5dp"
-            android:text="510 , Advantal Technologies\nIndore (M.P.)\n 452010"
-            android:textColor="#ffffff"
-            android:textSize="15sp" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="5dp">
 
-    </LinearLayout>
+                <com.orderpro.customer.customfonts.Custom_text
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="Address :"
+                    android:textColor="#75ffffff"
+                    android:textSize="12sp" />
 
+                <com.orderpro.customer.customfonts.Custom_text
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/rounded_btn"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="510 , Advantal Technologies\nIndore (M.P.)\n 452010\n Toll Free no: 18002031188"
+                    android:textColor="#ffffff"
+                    android:textSize="15sp" />
 
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
 </LinearLayout>

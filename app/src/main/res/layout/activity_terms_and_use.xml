@@ -13,7 +13,8 @@
 
         <ImageView
             android:id="@+id/iv_back"
-            android:layout_width="40dp"
+            android:layout_width="30dp"
+            android:layout_marginLeft="10dp"
             android:layout_height="40dp"
             android:src="@drawable/back_arrows" />
 
@@ -50,7 +51,7 @@
             android:layout_height="wrap_content"
             >
 
-            <TextView
+            <com.orderpro.customer.customfonts.Custom_text
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="20dp"
@@ -75,7 +76,7 @@
         android:orientation="horizontal"
         android:weightSum="2">
 
-        <Button
+        <com.orderpro.customer.customfonts.Custom_Btntxt
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
@@ -86,7 +87,7 @@
             android:textColor="#ffffff"
             android:textSize="18sp" />
 
-        <Button
+        <com.orderpro.customer.customfonts.Custom_Btntxt
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"

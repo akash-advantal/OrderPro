@@ -13,21 +13,21 @@
 
         <ImageView
             android:id="@+id/iv_back"
-            android:layout_width="20dp"
-            android:layout_height="20dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
             android:layout_alignParentLeft="true"
             android:layout_gravity="center"
-            android:layout_marginRight="5dp"
-            android:layout_weight="0.03"
-            android:background="@drawable/arrow_back_white"
-            android:paddingLeft="10dp" />
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="0.02"
+            android:background="@drawable/arrow_back_white" />
 
-        <TextView
+        <com.orderpro.customer.customfonts.Custom_text
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
-            android:layout_weight="0.85"
             android:layout_gravity="center"
+            android:layout_weight="0.85"
             android:text="Order Detail"
             android:textColor="#ffffff"
             android:textSize="18sp" />
@@ -68,7 +68,7 @@
             android:layout_weight="1"
             android:orientation="vertical">
 
-            <TextView
+            <com.orderpro.customer.customfonts.Custom_Txt_Bold
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -77,7 +77,7 @@
                 android:text="Ordered On"
                 android:textColor="#ffffff" />
 
-            <TextView
+            <com.orderpro.customer.customfonts.Custom_text
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -98,7 +98,7 @@
             android:layout_weight="1"
             android:orientation="vertical">
 
-            <TextView
+            <com.orderpro.customer.customfonts.Custom_Txt_Bold
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -107,7 +107,7 @@
                 android:text="Items"
                 android:textColor="#ffffff" />
 
-            <TextView
+            <com.orderpro.customer.customfonts.Custom_text
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -128,7 +128,7 @@
             android:layout_weight="1"
             android:orientation="vertical">
 
-            <TextView
+            <com.orderpro.customer.customfonts.Custom_Txt_Bold
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -137,7 +137,7 @@
                 android:text="Grand Total"
                 android:textColor="#ffffff" />
 
-            <TextView
+            <com.orderpro.customer.customfonts.Custom_text
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -167,7 +167,7 @@
                 android:padding="5dp">
 
 
-                <TextView
+                <com.orderpro.customer.customfonts.Custom_text
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:padding="5dp"
@@ -187,7 +187,7 @@
                         android:background="@drawable/mobile_icon"
                         android:padding="10dp" />
 
-                    <TextView
+                    <com.orderpro.customer.customfonts.Custom_text
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
@@ -209,7 +209,7 @@
                         android:background="@drawable/email_icon"
                         android:padding="10dp" />
 
-                    <TextView
+                    <com.orderpro.customer.customfonts.Custom_text
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
@@ -221,7 +221,7 @@
             </LinearLayout>
 
 
-            <TextView
+            <com.orderpro.customer.customfonts.Custom_text
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
@@ -246,7 +246,7 @@
                 android:background="@drawable/rounded_corners"
                 android:orientation="vertical">
 
-                <TextView
+                <com.orderpro.customer.customfonts.Custom_text
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
@@ -258,9 +258,9 @@
                     android:layout_width="100dp"
                     android:layout_height="100dp"
                     android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
                     android:background="@drawable/snewone"
-                    android:padding="20dp"
-                    android:layout_marginTop="10dp"/>
+                    android:padding="20dp" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -268,19 +268,19 @@
                     android:orientation="horizontal"
                     android:padding="5dp">
 
-                    <TextView
+                    <com.orderpro.customer.customfonts.Custom_text
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Seller→" />
 
-                    <TextView
+                    <com.orderpro.customer.customfonts.Custom_text
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text=" WS Retail" />
 
                 </LinearLayout>
 
-                <TextView
+                <com.orderpro.customer.customfonts.Custom_text
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:padding="5dp"
@@ -288,7 +288,7 @@
             </LinearLayout>
 
 
-            <TextView
+            <com.orderpro.customer.customfonts.Custom_text
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
@@ -321,12 +321,12 @@
                     android:orientation="vertical"
                     android:padding="5dp">
 
-                    <TextView
+                    <com.orderpro.customer.customfonts.Custom_text
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Delivered On" />
 
-                    <TextView
+                    <com.orderpro.customer.customfonts.Custom_text
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
@@ -347,12 +347,12 @@
                     android:orientation="vertical"
                     android:padding="5dp">
 
-                    <TextView
+                    <com.orderpro.customer.customfonts.Custom_text
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Quantity" />
 
-                    <TextView
+                    <com.orderpro.customer.customfonts.Custom_text
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
@@ -373,12 +373,12 @@
                     android:orientation="vertical"
                     android:padding="5dp">
 
-                    <TextView
+                    <com.orderpro.customer.customfonts.Custom_text
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Price" />
 
-                    <TextView
+                    <com.orderpro.customer.customfonts.Custom_text
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
@@ -399,7 +399,7 @@
                 <!--android:layout_height="0.5px"-->
                 <!--android:background="#000" />-->
 
-                <TextView
+                <com.orderpro.customer.customfonts.Custom_text
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="3dp"
@@ -421,7 +421,7 @@
                 android:orientation="vertical"
                 android:padding="5dp">
 
-                <TextView
+                <com.orderpro.customer.customfonts.Custom_text
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
@@ -447,7 +447,7 @@
                             android:layout_height="30dp"
                             android:background="@drawable/invoice_icon" />
 
-                        <TextView
+                        <com.orderpro.customer.customfonts.Custom_text
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:padding="2dp"
@@ -473,7 +473,7 @@
                             android:layout_height="30dp"
                             android:background="@drawable/needhelp_icon" />
 
-                        <TextView
+                        <com.orderpro.customer.customfonts.Custom_text
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:padding="2dp"
@@ -491,7 +491,7 @@
                 android:orientation="vertical"
                 android:padding="5dp">
 
-                <TextView
+                <com.orderpro.customer.customfonts.Custom_text
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
@@ -515,7 +515,7 @@
                         android:layout_height="50dp"
                         android:background="@drawable/location_gps" />
 
-                    <TextView
+                    <com.orderpro.customer.customfonts.Custom_text
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/delivery_address"
@@ -531,7 +531,7 @@
                 android:orientation="vertical"
                 android:padding="5dp">
 
-                <TextView
+                <com.orderpro.customer.customfonts.Custom_text
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
@@ -550,7 +550,7 @@
                         android:layout_height="30dp"
                         android:background="@drawable/rupee_sign" />
 
-                    <TextView
+                    <com.orderpro.customer.customfonts.Custom_text
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
@@ -563,35 +563,36 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:padding="5dp"
                 android:layout_margin="10dp"
-                android:background="@drawable/rounded_corners">
+                android:background="@drawable/rounded_corners"
+                android:orientation="vertical"
+                android:padding="5dp">
 
-                <TextView
-                    android:gravity="center"
-                    android:textColor="#000"
+                <com.orderpro.customer.customfonts.Custom_text
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Delivery Status"/>
+                    android:gravity="center"
+                    android:text="Delivery Status"
+                    android:textColor="#000" />
 
                 <ImageView
                     android:layout_width="50dp"
                     android:layout_height="50dp"
-                    android:background="@drawable/in_transit_icon"
-                    android:layout_gravity="center"/>
-                <TextView
+                    android:layout_gravity="center"
+                    android:background="@drawable/in_transit_icon" />
+
+                <com.orderpro.customer.customfonts.Custom_text
                     android:layout_width="match_parent"
-                    android:padding="5dp"
                     android:layout_height="wrap_content"
-                    android:text="Courier Partner : Blue Dart"/>
+                    android:padding="5dp"
+                    android:text="Courier Partner : Blue Dart" />
 
 
-                <TextView
+                <com.orderpro.customer.customfonts.Custom_text
                     android:layout_width="match_parent"
-                    android:padding="5dp"
                     android:layout_height="wrap_content"
-                    android:text="Consignment Status : In Transit"/>
+                    android:padding="5dp"
+                    android:text="Consignment Status : In Transit" />
             </LinearLayout>
 
         </LinearLayout>

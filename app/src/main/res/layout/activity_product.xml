@@ -21,8 +21,8 @@
 
             <ImageView
                 android:id="@+id/iv_back"
-                android:layout_width="25dp"
-                android:layout_height="30dp"
+                android:layout_width="30dp"
+                android:layout_height="40dp"
                 android:layout_weight="0.1"
                 android:background="@drawable/back_arrows_white" />
 
@@ -133,7 +133,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.2"
-                        android:background="#e8e8e8"
+                        android:background="#f6856b"
                         android:gravity="center"
                         android:padding="5dp"
                         android:text="₹ 605.00"

@@ -12,9 +12,7 @@
             android:id="@+id/item_icon"
             android:layout_width="40dp"
             android:layout_height="40dp"
-            android:layout_margin="10dp"
-
-             />
+            android:layout_margin="10dp" />
 
         <com.orderpro.customer.customfonts.Custom_text
             android:id="@+id/item_title"
