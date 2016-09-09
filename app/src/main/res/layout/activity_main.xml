@@ -55,6 +55,7 @@
 
             </LinearLayout>
         </RelativeLayout>
+
     </android.support.v7.widget.Toolbar>
 
     <com.daimajia.slider.library.SliderLayout

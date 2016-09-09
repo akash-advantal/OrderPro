@@ -6,7 +6,11 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
+import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.Animation;
@@ -46,18 +50,46 @@ public class DashBoardParentFragment extends Fragment implements BaseSliderView.
     TextSliderView textSliderView;
     DummyData ddobj = new DummyData();
     public DashBoardChildFragment dashBoardChildFragment = new DashBoardChildFragment();
-
     ArrayList<ItemCategories> itemCategories;
     RippleView open_quik_orders, open_notification, open_chat;
     HashMap<String, Integer> file_maps;
+    View view;
+
+
+    // Declare
+    Menu menu;
+    MenuItem menuDoneItem;
+
+    // Then in your onCreateOptionMenu() method write the following...
+    @Override
+    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+        this.menu = menu;
+        inflater.inflate(R.menu.menu_main, menu);
+    }
+
+    // In your onOptionItemSelected() method write the following...
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.item1:
+                this.menuDoneItem = item;
+                Toast.makeText(getActivity(), "", Toast.LENGTH_SHORT).show();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
-        View view = inflater.inflate(R.layout.activity_main, container, false);
-
+        view = inflater.inflate(R.layout.activity_main, container, false);
         itemCategories = ddobj.initItemCategories();
-
+//        setHasOptionsMenu(true);
+        Toolbar toolbar = (Toolbar)view.findViewById(R.id.toolbar);
+//        getActivity().setSupportActionBar(toolbar);
+//toolbar.showContextMenu();
         hiddenPanel = view.findViewById(R.id.slider);
         mDemoSlider = (SliderLayout) view.findViewById(R.id.slider);
         arrowdown = (LinearLayout) view.findViewById(R.id.arrowdown);
@@ -66,6 +98,9 @@ public class DashBoardParentFragment extends Fragment implements BaseSliderView.
         open_quik_orders = (RippleView) view.findViewById(R.id.open_quik_orders);
         open_notification = (RippleView) view.findViewById(R.id.open_notification);
         open_chat = (RippleView) view.findViewById(R.id.open_chat);
+
+
+
 
         arrowdown.setOnClickListener(this);
         drawer_icon.setOnClickListener(this);
@@ -206,19 +241,23 @@ public class DashBoardParentFragment extends Fragment implements BaseSliderView.
                 break;
             case R.id.arrowdown:
                 slideUpDown(button_arrow);
+
                 break;
             case R.id.open_quik_orders:
                 Toast.makeText(getActivity(), "open_quik_orders", Toast.LENGTH_SHORT).show();
+
                 break;
             case R.id.open_notification:
-//                Toast.makeText(getActivity(), "open_notification", Toast.LENGTH_SHORT).show();
+//               Toast.makeText(getActivity(), "open_notification", Toast.LENGTH_SHORT).show();
                 startActivity(new Intent(getActivity(), NotificationActivity.class));
                 break;
             case R.id.open_chat:
+                menuDoneItem.setVisible(true);
                 Toast.makeText(getActivity(), "open_chat", Toast.LENGTH_SHORT).show();
                 break;
 
         }
 
     }
+
 }

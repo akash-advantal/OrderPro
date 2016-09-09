@@ -32,9 +32,9 @@ public class SupportFragment extends Fragment implements View.OnClickListener {
 
         view = inflater.inflate(R.layout.fragment_support, container, false);
         drawer_icon = (ImageView) view.findViewById(R.id.drawer_icon);
-        contact_us = (LinearLayout) view.findViewById(R.id.my_profile);
-        terms_of_use = (LinearLayout) view.findViewById(R.id.my_merchants);
-        faqs = (LinearLayout) view.findViewById(R.id.change_password);
+        contact_us = (LinearLayout) view.findViewById(R.id.contactus);
+        terms_of_use = (LinearLayout) view.findViewById(R.id.termsofuse);
+        faqs = (LinearLayout) view.findViewById(R.id.faqs);
 
 
         drawer_icon.setOnClickListener(this);
@@ -53,13 +53,13 @@ public class SupportFragment extends Fragment implements View.OnClickListener {
             case R.id.drawer_icon:
                 navigationActivity.toggle();
                 break;
-            case R.id.my_profile:
+            case R.id.contactus:
                 startActivity(new Intent(getActivity(),ContactusActivity.class));
                 break;
-            case R.id.my_merchants:
+            case R.id.termsofuse:
                 startActivity(new Intent(getActivity(),TermsofuseActivity.class));
                 break;
-            case R.id.change_password:
+            case R.id.faqs:
 //                navigationActivity.toggle();
                 break;
         }

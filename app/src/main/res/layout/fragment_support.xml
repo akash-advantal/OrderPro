@@ -45,7 +45,7 @@
 
 
     <LinearLayout
-        android:id="@+id/my_profile"
+        android:id="@+id/contactus"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
@@ -77,11 +77,11 @@
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/my_merchants"
+        android:id="@+id/termsofuse"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
-        android:layout_below="@+id/my_profile"
+        android:layout_below="@+id/contactus"
         android:layout_gravity="center"
         android:layout_marginLeft="10dp"
         android:gravity="center"
@@ -107,11 +107,11 @@
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/change_password"
+        android:id="@+id/faqs"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
-        android:layout_below="@+id/my_merchants"
+        android:layout_below="@+id/termsofuse"
         android:layout_gravity="center"
         android:layout_marginLeft="10dp"
         android:gravity="center"
