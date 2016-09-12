@@ -13,7 +13,7 @@ import android.widget.LinearLayout;
 
 import com.merchant.orderpro.R;
 import com.orderpro.customer.ui.ChangePassword;
-import com.orderpro.customer.ui.MerchantDetailsActivity;
+import com.orderpro.customer.ui.MerchantActivity;
 import com.orderpro.customer.ui.MyProfileActivity;
 import com.orderpro.customer.ui.NavigationActivity;
 
@@ -61,7 +61,7 @@ public class SettingsFragment extends Fragment implements View.OnClickListener {
 
                 break;
             case R.id.my_merchants:
-                startActivity(new Intent(getActivity(),MerchantDetailsActivity.class));
+                startActivity(new Intent(getActivity(),MerchantActivity.class));
 
                 break;
             case R.id.change_password:

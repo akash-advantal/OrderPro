@@ -49,9 +49,9 @@ public class NotificationAdapter extends BaseAdapter {
         View v= lif.inflate(R.layout.your_orders_item, null);
 
         ImageView item_image=(ImageView) v.findViewById(R.id.item_image);
-        TextView item_title=(TextView) v.findViewById(R.id.item_title);
+        TextView item_title=(TextView) v.findViewById(R.id.merchant_name);
         TextView item_content=(TextView) v.findViewById(R.id.item_content);
-        TextView item_decs=(TextView) v.findViewById(R.id.item_decs);
+        TextView item_decs=(TextView) v.findViewById(R.id.merchant_address);
 
 
         NotificationData notificationData= notificationlist.get(position);

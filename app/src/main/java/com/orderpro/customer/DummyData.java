@@ -4,6 +4,7 @@ import com.merchant.orderpro.R;
 import com.orderpro.customer.bean.CartData;
 import com.orderpro.customer.bean.ItemCategories;
 import com.orderpro.customer.bean.ItemDataDashBoardList;
+import com.orderpro.customer.bean.MerchantListData;
 import com.orderpro.customer.bean.NotificationData;
 import com.orderpro.customer.bean.OrderHistorydata;
 
@@ -20,6 +21,7 @@ public class DummyData {
     public ArrayList<OrderHistorydata> orderlist = new ArrayList<OrderHistorydata>();
     public ArrayList<NotificationData> notificationlist = new ArrayList<NotificationData>();
     public ArrayList<CartData> cartlist = new ArrayList<CartData>();
+    public ArrayList<MerchantListData> merchantList = new ArrayList<MerchantListData>();
     public ArrayList<ItemCategories> itemCategories = new ArrayList<ItemCategories>();
     HashMap<String, Integer> file_maps = new HashMap<>();
 
@@ -144,6 +146,14 @@ public class DummyData {
     }
 
 
+    public ArrayList<MerchantListData> initmerchantList() {
+
+        merchantList.add(new MerchantListData("Ayush Bhatnagar","901234567","510, 6th Floor, Shagun Complex , AB Road, Vijay Nagar, Indore - 452010, Above Apna Sweets"));
+        merchantList.add(new MerchantListData("Ayush Bhatnagar","901234567","510, 6th Floor, Shagun Complex , AB Road, Vijay Nagar, Indore - 452010, Above Apna Sweets"));
+        merchantList.add(new MerchantListData("Ayush Bhatnagar","901234567","510, 6th Floor, Shagun Complex , AB Road, Vijay Nagar, Indore - 452010, Above Apna Sweets"));
+        merchantList.add(new MerchantListData("Ayush Bhatnagar","901234567","510, 6th Floor, Shagun Complex , AB Road, Vijay Nagar, Indore - 452010, Above Apna Sweets"));
+        return merchantList;
+    }
 
 
 }

@@ -55,7 +55,7 @@
             android:orientation="vertical">
 
             <com.orderpro.customer.customfonts.Custom_Txt_Bold
-                android:id="@+id/item_title"
+                android:id="@+id/merchant_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
@@ -75,7 +75,7 @@
                 android:textSize="13dp" />
 
             <com.orderpro.customer.customfonts.Custom_Txt_Bold
-                android:id="@+id/item_decs"
+                android:id="@+id/merchant_address"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"

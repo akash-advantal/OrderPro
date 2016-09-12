@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@drawable/otp_background">
+    android:layout_height="wrap_content"
+    >
 
 
     <LinearLayout
@@ -33,7 +33,7 @@
                     android:textSize="13dp" />
 
                 <com.orderpro.customer.customfonts.Custom_Txt_Bold
-                    android:id="@+id/item_title"
+                    android:id="@+id/merchant_name"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
@@ -61,6 +61,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
+                    android:id="@+id/merchant_no"
                     android:padding="5dp"
                     android:text=" +91 8458496698"
                     android:textColor="#000"
@@ -74,7 +75,7 @@
                 android:layout_margin="5dp">
 
                 <com.orderpro.customer.customfonts.Custom_Txt_Bold
-                    android:id="@+id/item_decs"
+                    android:id="@+id/merchant_address"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:padding="10dp"

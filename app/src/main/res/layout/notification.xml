@@ -61,7 +61,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
                 android:padding="5dp"
-                android:id="@+id/item_title"
+                android:id="@+id/merchant_name"
                 android:text="Product Name"
                 android:textColor="#000"
                 android:textSize="13dp" />
@@ -81,7 +81,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:id="@+id/item_decs"
+                android:id="@+id/merchant_address"
 
                 android:padding="5dp"
                 android:text="Discription"
