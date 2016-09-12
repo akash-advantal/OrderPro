@@ -135,10 +135,10 @@
                         android:layout_weight="0.2"
                         android:background="#f6856b"
                         android:gravity="center"
-                        android:textColor="#ffffff"
                         android:padding="5dp"
                         android:text="₹ 605.00"
-                        android:textAllCaps="false" />
+                        android:textAllCaps="false"
+                        android:textColor="#ffffff" />
                 </LinearLayout>
             </LinearLayout>
 
