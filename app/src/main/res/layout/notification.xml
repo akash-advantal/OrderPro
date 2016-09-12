@@ -41,7 +41,7 @@
                 android:background="@drawable/snewone" />
 
         </LinearLayout>
-
+<!--ayush-->
         <View
             android:layout_width="1px"
             android:layout_height="80dp"
