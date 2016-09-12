@@ -68,7 +68,7 @@ public class DashBoardAdapter extends RecyclerView.Adapter<DashBoardAdapter.View
 
         public ViewHolder(View itemLayoutView) {
             super(itemLayoutView);
-            txtViewTitle = (TextView) itemLayoutView.findViewById(R.id.item_title);
+            txtViewTitle = (TextView) itemLayoutView.findViewById(R.id.merchant_name);
             imgViewIcon = (ImageView) itemLayoutView.findViewById(R.id.item_icon);
 
         }

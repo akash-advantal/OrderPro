@@ -252,7 +252,7 @@ public class DashBoardParentFragment extends Fragment implements BaseSliderView.
                 startActivity(new Intent(getActivity(), NotificationActivity.class));
                 break;
             case R.id.open_chat:
-                menuDoneItem.setVisible(true);
+//                menuDoneItem.setVisible(true);
                 Toast.makeText(getActivity(), "open_chat", Toast.LENGTH_SHORT).show();
                 break;
 

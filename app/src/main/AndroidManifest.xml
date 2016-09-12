@@ -75,6 +75,12 @@
             android:windowSoftInputMode="adjustNothing" />
 
 
+        <activity
+            android:name="com.orderpro.customer.ui.MerchantActivity"
+
+            android:windowSoftInputMode="adjustNothing" />
+
+
     </application>
 
 </manifest>
