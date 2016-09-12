@@ -2,6 +2,7 @@ package com.orderpro.customer;
 
 import com.merchant.orderpro.R;
 import com.orderpro.customer.bean.CartData;
+import com.orderpro.customer.bean.FavouritseListData;
 import com.orderpro.customer.bean.ItemCategories;
 import com.orderpro.customer.bean.ItemDataDashBoardList;
 import com.orderpro.customer.bean.MerchantListData;
@@ -22,6 +23,7 @@ public class DummyData {
     public ArrayList<NotificationData> notificationlist = new ArrayList<NotificationData>();
     public ArrayList<CartData> cartlist = new ArrayList<CartData>();
     public ArrayList<MerchantListData> merchantList = new ArrayList<MerchantListData>();
+    public ArrayList<FavouritseListData> favouritseList = new ArrayList<FavouritseListData>();
     public ArrayList<ItemCategories> itemCategories = new ArrayList<ItemCategories>();
     HashMap<String, Integer> file_maps = new HashMap<>();
 
@@ -117,6 +119,13 @@ public class DummyData {
         orderlist.add(new OrderHistorydata("Elegant Blue Shirt", "Delivery Status - Pending", "Delivered by 31, july, 2016", R.drawable.ic_launcher));
         orderlist.add(new OrderHistorydata("Elegant Blue Shirt", "Delivery Status - Pending", "Delivered by 31, july, 2016", R.drawable.ic_launcher));
         return orderlist;
+    }
+    public ArrayList<FavouritseListData> initFavouritesData() {
+        favouritseList.add(new FavouritseListData("Elegant Blue Shirt", "Delivery Status - Pending", "Delivered by 31, july, 2016", R.drawable.ic_launcher));
+        favouritseList.add(new FavouritseListData("Elegant Blue Shirt", "Delivery Status - Pending", "Delivered by 31, july, 2016", R.drawable.ic_launcher));
+        favouritseList.add(new FavouritseListData("Elegant Blue Shirt", "Delivery Status - Pending", "Delivered by 31, july, 2016", R.drawable.ic_launcher));
+        favouritseList.add(new FavouritseListData("Elegant Blue Shirt", "Delivery Status - Pending", "Delivered by 31, july, 2016", R.drawable.ic_launcher));
+        return favouritseList;
     }
 
     public ArrayList<CartData> initCartList() {

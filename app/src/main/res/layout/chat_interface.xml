@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@drawable/otp_background"
+    android:layout_height="match_parent">
+    <!--  <co.devcenter.androiduilibrary.ChatView
+          android:id="@+id/rooster_chat_view"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:visibility="gone">
+
+      </co.devcenter.androiduilibrary.ChatView>
+  -->
+    <LinearLayout
+        android:id="@+id/tabbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#0174df"
+        android:padding="6dp"
+        android:weightSum="3">
+
+        <ImageView
+
+            android:id="@+id/drawer_icon"
+            android:layout_width="23dp"
+            android:layout_height="30dp"
+            android:layout_weight="0.1"
+            android:src="@drawable/drawer"
+            />
+
+        <com.orderpro.customer.customfonts.Custom_text
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="20dp"
+            android:layout_weight="2.5"
+            android:text="Setting"
+            android:textColor="#ffffff"
+            android:textSize="18dp" />
+
+
+        <!--<ImageView-->
+        <!--android:layout_width="25dp"-->
+        <!--android:layout_height="25dp"-->
+        <!--android:layout_gravity="right|center"-->
+        <!--android:layout_marginLeft="40dp"-->
+        <!--android:layout_weight="0.1"-->
+        <!--android:background="@drawable/icon_cart_wh" />-->
+    </LinearLayout>
+
+
+
+
+    <include
+        android:id="@+id/newqw"
+        layout="@layout/chatting_bubbles"
+/>
+    <RelativeLayout
+        android:id="@+id/footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerVertical="true"
+        android:background="#edf0f4"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/middle"
+            android:layout_alignParentLeft="true"
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="10dp"
+            android:gravity="bottom"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:background="@drawable/add_icon_black" />
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:background="@drawable/emoji_icon" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/middle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:layout_toLeftOf="@+id/right"
+            android:layout_toRightOf="@+id/left"
+            android:layout_weight="4"
+            android:gravity="center">
+
+            <com.orderpro.customer.customfonts.CustomEditTxt
+                android:id="@+id/message_ET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_edit_text"
+                android:hint="Type Something"
+                android:maxLines="4"
+                android:padding="10dp"
+                android:text="" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/middle"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:layout_marginRight="10dp"
+            android:layout_weight="0.5"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/sendmessagebutton"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:background="@drawable/ic_imsend"
+
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/Chat_Keyboard"
+                android:layout_width="40dp"
+                android:layout_height="23dp"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:background="@drawable/keyboard_icon" />
+        </LinearLayout>
+    </RelativeLayout>
+
+
+</RelativeLayout>

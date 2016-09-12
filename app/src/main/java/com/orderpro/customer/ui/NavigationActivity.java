@@ -12,11 +12,13 @@ import android.widget.LinearLayout;
 import com.merchant.orderpro.R;
 import com.navdrawer.SimpleSideDrawer;
 import com.orderpro.customer.fragments.DashBoardParentFragment;
+import com.orderpro.customer.fragments.FavouritesFragment;
 import com.orderpro.customer.fragments.InviteFriendsFragment;
 import com.orderpro.customer.fragments.OrderHistoryFragment;
 import com.orderpro.customer.fragments.SettingsFragment;
 import com.orderpro.customer.fragments.SupportFragment;
 import com.orderpro.customer.util.OnSwipeTouchListener;
+
 /**
  * Created by AKASH on 30-Aug-16.
  */
@@ -112,6 +114,7 @@ public class NavigationActivity extends FragmentActivity implements View.OnClick
         home.setOnClickListener(this);
 
     }
+
     @Override
     public void onClick(View v) {
 
@@ -163,8 +166,10 @@ public class NavigationActivity extends FragmentActivity implements View.OnClick
                 setVisibility(R.id.offers);
                 break;
             case R.id.myfav:
+                fragmentTransaction = fragmentManager.beginTransaction().replace(R.id.frame, new FavouritesFragment());
+                fragmentTransaction.commit();
+                navigationDrawer.toggleLeftDrawer();
                 setVisibility(R.id.myfav);
-
                 break;
         }
 
@@ -172,8 +177,6 @@ public class NavigationActivity extends FragmentActivity implements View.OnClick
 
     public void setVisibility(int id) {
         switch (id) {
-
-
             case R.id.home:
                 focusimage_home.setVisibility(View.VISIBLE);
                 focusimage_switch_merchant.setVisibility(View.GONE);
@@ -283,7 +286,6 @@ public class NavigationActivity extends FragmentActivity implements View.OnClick
 
 
     }
-
 
 
     public void toggle() {
