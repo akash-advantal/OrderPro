@@ -12,6 +12,7 @@ import android.widget.LinearLayout;
 import com.merchant.orderpro.R;
 import com.navdrawer.SimpleSideDrawer;
 import com.orderpro.customer.fragments.DashBoardParentFragment;
+import com.orderpro.customer.fragments.InviteFriendsFragment;
 import com.orderpro.customer.fragments.OrderHistoryFragment;
 import com.orderpro.customer.fragments.SettingsFragment;
 import com.orderpro.customer.fragments.SupportFragment;
@@ -147,6 +148,9 @@ public class NavigationActivity extends FragmentActivity implements View.OnClick
                 setVisibility(R.id.settings);
                 break;
             case R.id.invite_friends:
+                fragmentTransaction = fragmentManager.beginTransaction().replace(R.id.frame, new InviteFriendsFragment());
+                fragmentTransaction.commit();
+                navigationDrawer.toggleLeftDrawer();
                 setVisibility(R.id.invite_friends);
                 break;
             case R.id.support:
