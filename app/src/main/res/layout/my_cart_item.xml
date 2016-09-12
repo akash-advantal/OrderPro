@@ -2,8 +2,8 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical"
-    android:background="#e8e8e8">
+    android:background="#e8e8e8"
+    android:orientation="vertical">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -11,8 +11,6 @@
         android:layout_margin="10dp"
         android:background="@drawable/rounded_corners"
         android:weightSum="2">
-
-
 
 
         <LinearLayout
@@ -52,29 +50,30 @@
                     android:text=" ₹ 302.50"
                     android:textColor="#000"
                     android:textSize="20dp" />
-<LinearLayout
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:orientation="vertical">
-                <TextView
-                    android:id="@+id/tv_cut"
-                    android:textSize="18sp"
 
+                <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="₹ 605.00" />
+                    android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/discount"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="50%"
-        android:textColor="#000"
-        android:textSize="16sp"
-        android:gravity="center"
-        android:layout_gravity="center"/>
+                    <TextView
+                        android:id="@+id/tv_cut"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="₹ 605.00"
+                        android:textSize="18sp" />
 
-</LinearLayout>
+                    <TextView
+                        android:id="@+id/discount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="50%"
+                        android:textColor="#000"
+                        android:textSize="16sp" />
+
+                </LinearLayout>
             </LinearLayout>
 
             <com.orderpro.customer.customfonts.Custom_Txt_Bold

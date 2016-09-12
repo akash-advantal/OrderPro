@@ -154,7 +154,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_margin="20dp"
-                android:background="@drawable/rounded_btn"
+                android:background="@drawable/rounded_stroke"
                 android:gravity="center"
                 android:padding="5dp"
                 android:text="510, 6th Floor, Shagun Complex , AB Road, Vijay Nagar, Indore - 452010, Above Apna Sweets (Map)\n Tool Free : 18001027799"

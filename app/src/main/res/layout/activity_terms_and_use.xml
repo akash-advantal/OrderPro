@@ -14,8 +14,8 @@
         <ImageView
             android:id="@+id/iv_back"
             android:layout_width="30dp"
-            android:layout_marginLeft="10dp"
             android:layout_height="40dp"
+            android:layout_marginLeft="10dp"
             android:src="@drawable/back_arrows" />
 
         <com.orderpro.customer.customfonts.Custom_text
@@ -42,14 +42,13 @@
         android:layout_width="wrap_content"
         android:layout_height="300dp"
         android:layout_gravity="center"
-        android:background="@drawable/rounded_btn"
+        android:layout_margin="10dp"
 
-        android:layout_margin="10dp">
+        android:background="@drawable/rounded_stroke">
 
         <ScrollView
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            >
+            android:layout_height="wrap_content">
 
             <com.orderpro.customer.customfonts.Custom_text
                 android:layout_width="match_parent"
