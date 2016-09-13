@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import com.merchant.orderpro.R;
 import com.orderpro.customer.DummyData;
@@ -31,6 +32,7 @@ public class FavouritesFragment extends Fragment implements View.OnClickListener
     ArrayList<FavouritseListData> favouritselist;
     ImageView drawer_icon, cart;
     View view;
+    TextView title;
     DummyData ddobj = new DummyData();
 
     @Nullable
@@ -41,7 +43,8 @@ public class FavouritesFragment extends Fragment implements View.OnClickListener
         drawer_icon = (ImageView) view.findViewById(R.id.drawer_icon);
         cart = (ImageView) view.findViewById(R.id.cart);
         favourites_listview = (ListView) view.findViewById(R.id.lv_orderhistory);
-
+        title = (TextView) view.findViewById(R.id.title);
+        title.setText("My Favourites");
         drawer_icon.setOnClickListener(this);
         cart.setOnClickListener(this);
 

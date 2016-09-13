@@ -29,8 +29,7 @@ public class ChatFragment extends Fragment implements View.OnClickListener {
 
 
         drawer_icon.setOnClickListener(this);
-
-        return view;
+         return view;
     }
 
 
@@ -51,5 +50,4 @@ public class ChatFragment extends Fragment implements View.OnClickListener {
         super.onAttach(context);
         navigationActivity = (NavigationActivity) getActivity();
     }
-
 }

@@ -8,8 +8,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.ImageView;
-import android.widget.TextView;
 
 import com.merchant.orderpro.R;
 import com.orderpro.customer.bean.NotificationData;
@@ -46,21 +44,21 @@ public class NotificationAdapter extends BaseAdapter {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         LayoutInflater lif= (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        View v= lif.inflate(R.layout.your_orders_item, null);
-
-        ImageView item_image=(ImageView) v.findViewById(R.id.item_image);
-        TextView item_title=(TextView) v.findViewById(R.id.merchant_name);
-        TextView item_content=(TextView) v.findViewById(R.id.item_content);
-        TextView item_decs=(TextView) v.findViewById(R.id.merchant_address);
-
-
-        NotificationData notificationData= notificationlist.get(position);
-        item_title.setText(notificationData.getItem_title());
-        item_content.setText(notificationData.getItem_content());
-        item_decs.setText(notificationData.getItem_decs());
-
-        item_image.setBackgroundResource(notificationData.getItem_image());
-
+        View v= lif.inflate(R.layout.notification, null);
+//
+//        ImageView item_image=(ImageView) v.findViewById(R.id.item_image);
+//        TextView item_title=(TextView) v.findViewById(R.id.merchant_name);
+//        TextView item_content=(TextView) v.findViewById(R.id.item_content);
+//        TextView item_decs=(TextView) v.findViewById(R.id.merchant_address);
+//
+//
+//        NotificationData notificationData= notificationlist.get(position);
+//        item_title.setText(notificationData.getItem_title());
+//        item_content.setText(notificationData.getItem_content());
+//        item_decs.setText(notificationData.getItem_decs());
+//
+//        item_image.setBackgroundResource(notificationData.getItem_image());
+//
 
         return v;
     }

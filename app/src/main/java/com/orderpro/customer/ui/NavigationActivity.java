@@ -11,6 +11,7 @@ import android.widget.LinearLayout;
 
 import com.merchant.orderpro.R;
 import com.navdrawer.SimpleSideDrawer;
+import com.orderpro.customer.fragments.ChatFragment;
 import com.orderpro.customer.fragments.DashBoardParentFragment;
 import com.orderpro.customer.fragments.FavouritesFragment;
 import com.orderpro.customer.fragments.InviteFriendsFragment;
@@ -142,6 +143,10 @@ public class NavigationActivity extends FragmentActivity implements View.OnClick
                 setVisibility(R.id.myorders);
                 break;
             case R.id.chat:
+                fragmentTransaction = fragmentManager.beginTransaction().replace(R.id.frame, new ChatFragment());
+                fragmentTransaction.commit();
+                navigationDrawer.toggleLeftDrawer();
+
                 setVisibility(R.id.chat);
                 break;
             case R.id.settings:
@@ -290,5 +295,27 @@ public class NavigationActivity extends FragmentActivity implements View.OnClick
 
     public void toggle() {
         navigationDrawer.toggleLeftDrawer();
+        navigationDrawer.setOnTouchListener(new OnSwipeTouchListener(this) {
+            public void onSwipeTop() {
+                //    Toast.makeText(SideMenu.this, "top", Toast.LENGTH_SHORT).show();
+            }
+
+            public void onSwipeRight() {
+                //Toast.makeText(SideMenu.this, "right", Toast.LENGTH_SHORT).show();
+                //navigationDrawer.toggleLeftDrawer();
+
+            }
+
+            public void onSwipeLeft() {
+                //  Toast.makeText(SideMenu.this, "left", Toast.LENGTH_SHORT).show();
+                navigationDrawer.toggleLeftDrawer();
+            }
+
+            public void onSwipeBottom() {
+                //    Toast.makeText(SideMenu.this, "bottom", Toast.LENGTH_SHORT).show();
+            }
+
+        });
+
     }
 }
